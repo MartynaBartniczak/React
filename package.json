@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/infoshareacademy/jfdd7-react#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "css-loader": "^0.28.4",
+    "jquery": "^3.2.1",
+    "style-loader": "^0.18.2"
   },
   "devDependencies": {
     "webpack": "^3.0.0"
