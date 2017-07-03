@@ -1,27 +1,16 @@
 {
   "name": "jfdd7-react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/infoshareacademy/jfdd7-react.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/infoshareacademy/jfdd7-react/issues"
-  },
-  "homepage": "https://github.com/infoshareacademy/jfdd7-react#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "css-loader": "^0.28.4",
-    "jquery": "^3.2.1",
-    "style-loader": "^0.18.2"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
   },
-  "devDependencies": {
-    "webpack": "^3.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
