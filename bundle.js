@@ -110,7 +110,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background: yellow;\n}", ""]);
+exports.push([module.i, "body {\n  background: blue;\n}", ""]);
 
 // exports
 
