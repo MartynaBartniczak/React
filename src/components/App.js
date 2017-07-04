@@ -9,7 +9,10 @@ export default class App extends React.Component {
         id="foo"
         className="welcome"
       >
-        <Counter />
+        <Counter initialValue="2"/>
+        <Counter initialValue={4}/>
+        <Counter initialValue={true}/>
+        <Counter initialValue="true"/>
       </div>
     )
   }
