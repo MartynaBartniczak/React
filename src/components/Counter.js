@@ -3,14 +3,29 @@ import React from 'react'
 export default class Counter extends React.Component {
 
   state = {
-    value: 0
+    value: this.props.initialValue
+  }
+
+  updateValue = (delta) => {
+    this.setState ({
+      value: this.state.value + delta  * (this.props.delta || 1)
+      }
+    )
   }
 
   handleIncrementClick = () => {
-    this.setState({
-      value: this.state.value + 1
-    })
-  }
+      this.updateValue(1)
+    }
+
+    handelDecrementClick = () => {
+      this.updateValue(-1)
+    }
+
+    handelresetClick = () => {
+      this.setState({
+        value: this.props.initialValue
+      })
+    }
 
   render() {
     return (
@@ -23,6 +38,19 @@ export default class Counter extends React.Component {
           >
             Increase
           </button>
+          <p />
+          <button
+            onClick={this.handelDecrementClick}
+            >
+            Decrease
+          </button>
+          <p />
+          <button
+              onClick={this.handelresetClick}
+          >
+            Clear
+          </button>
+
         </div>
       </div>
     )
