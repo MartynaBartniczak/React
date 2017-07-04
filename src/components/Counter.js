@@ -1,5 +1,9 @@
 import React from 'react'
 
+import Button from './Button'
+
+import './Counter.css'
+
 export default class Counter extends React.Component {
 
   state = {
@@ -30,33 +34,33 @@ export default class Counter extends React.Component {
     console.log(this.props)
 
     return (
-      <div>
+      <div className="Counter">
         <h1>Counter</h1>
         <h2>{this.props.sharedValue}</h2>
         <h2>{this.state.value}</h2>
         <div>
-          <button
+          <Button
             onClick={this.props.handleZupa}
           >
             Awesome Increase
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={this.handleIncrementClick}
           >
             Increase
-          </button>
+          </Button>
 
-          <button
+          <Button
             onClick={this.handleDecrementClick}
           >
             Decrement
-          </button>
+          </Button>
 
-          <button
+          <Button
             onClick={this.handleResetClick}
           >
             Reset
-          </button>
+          </Button>
         </div>
       </div>
     )
