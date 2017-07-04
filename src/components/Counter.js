@@ -27,11 +27,19 @@ export default class Counter extends React.Component {
   }
 
   render() {
+    console.log(this.props)
+
     return (
       <div>
         <h1>Counter</h1>
+        <h2>{this.props.sharedValue}</h2>
         <h2>{this.state.value}</h2>
         <div>
+          <button
+            onClick={this.props.handleZupa}
+          >
+            Awesome Increase
+          </button>
           <button
             onClick={this.handleIncrementClick}
           >
