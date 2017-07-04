@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default class Counter extends React.Component {
+export default class Counter extends React.Component
+{
 
   state = {
     value: this.props.initialValue
@@ -21,7 +22,7 @@ export default class Counter extends React.Component {
       this.updateValue(-1)
     }
 
-    handelresetClick = () => {
+    handleresetClick = () => {
       this.setState({
         value: this.props.initialValue
       })
@@ -31,28 +32,31 @@ export default class Counter extends React.Component {
     return (
       <div>
         <h1>Counter</h1>
+        <h2>{this.props.sharedValue}</h2>
         <h2>{this.state.value}</h2>
         <div>
+          <button
+            onClick={this.props.handleZupa}
+          >
+            Przycisk zajebisty
+          </button>
           <button
             onClick={this.handleIncrementClick}
           >
             Increase
           </button>
-          <p />
           <button
             onClick={this.handelDecrementClick}
             >
             Decrease
           </button>
-          <p />
           <button
-              onClick={this.handelresetClick}
+              onClick={this.handleresetClick}
           >
             Clear
           </button>
-
         </div>
       </div>
     )
   }
-}
+  }
