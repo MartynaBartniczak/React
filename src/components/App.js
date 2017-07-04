@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Counter from './Counter'
+
 export default class App extends React.Component {
   render() {
     return (
@@ -7,7 +9,7 @@ export default class App extends React.Component {
         id="foo"
         className="welcome"
       >
-        Hello
+        <Counter />
       </div>
     )
   }
