@@ -6,16 +6,18 @@ export default class Counter extends React.Component {
     value: 0
   }
 
-  handleIncrementClick = () => {
+  updateValue = (delta) => {
     this.setState({
-      value: this.state.value + 1
+      value: this.state.value + delta
     })
   }
 
+  handleIncrementClick = () => {
+    this.updateValue(1)
+  }
+
   handleDecrementClick = () => {
-    this.setState({
-      value: this.state.value - 1
-    })
+    this.updateValue(-1)
   }
 
   handleResetClick = () => {
