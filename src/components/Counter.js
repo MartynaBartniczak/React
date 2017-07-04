@@ -11,6 +11,19 @@ export default class Counter extends React.Component {
       value: this.state.value + 1
     })
   }
+  handleDecrementClick = () => {
+    this.setState({
+        value: this.state.value - 1
+    })
+
+  }
+  resetbutton = () => {
+    this.setState({
+        value: this.state.value = 0
+    })
+
+  }
+
 
   render() {
     return (
@@ -22,6 +35,18 @@ export default class Counter extends React.Component {
             onClick={this.handleIncrementClick}
           >
             Increase
+          </button>
+
+          <button
+              onClick={this.handleDecrementClick}
+          >
+            Dectrase
+          </button>
+
+          <button
+              onClick={this.resetbutton}
+          >
+            Reset
           </button>
         </div>
       </div>
