@@ -1,0 +1,31 @@
+# Day 2
+
+- import ... from ...
+- export default ...
+- const X = React.createClass vs class X extends React.Component
+- VirtualDOM vs DOM (diff updates)
+- JSX
+  - className vs class
+  - onClick
+- state vs props
+- passing props to component
+- reading props inside a component (this.props)
+- modifying this.state using this.setState
+- arrow function vs function (binding this)
+- onClick
+- passing function down the cascade from parent component 
+  to allow children modify parent state
+- one direction data flow
+- lifecycle methods:
+  - mounting:
+     - componentWillMount
+     - render
+     - componentDidMount
+  - updating:
+     - componentWillReceiveProps
+     - shouldComponentUpdate
+     - componentWillUpdate
+     - render
+     - componentDidUpdate
+  - unmounting:
+     - componentWillUnmount
