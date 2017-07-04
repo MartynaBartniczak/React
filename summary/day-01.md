@@ -1,11 +1,11 @@
 # Day 1
 
 - NVM
-- NodeJS
+- NodeJS 1.
 - npm
 - npm init
 - package.json
-- npm install [--save | --save-dev | -g] [package name]
+- npm install [--save | --save-dev | -g] [package name] 2.
 - Webpack
 - webpack.config.js
 - --watch
