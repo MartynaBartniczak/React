@@ -1,7 +1,7 @@
 import React from 'react'
 
-const App = React.createClass({
-  render: function () {
+export default class App extends React.Component {
+  render() {
     return (
       <div
         id="foo"
@@ -11,6 +11,4 @@ const App = React.createClass({
       </div>
     )
   }
-})
-
-export default App
+}
