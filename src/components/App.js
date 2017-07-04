@@ -6,12 +6,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Counter />
-        <Counter />
-        <Counter delta={100}/>
-        <Counter />
-        <Counter />
-        <Counter />
+        <Counter initialValue={1} />
+        <Counter initialValue={10} />
+        <Counter initialValue={100} delta={100}/>
       </div>
     )
   }

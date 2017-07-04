@@ -3,7 +3,7 @@ import React from 'react'
 export default class Counter extends React.Component {
 
   state = {
-    value: 0
+    value: this.props.initialValue
   }
 
   updateValue = (delta) => {
@@ -22,7 +22,7 @@ export default class Counter extends React.Component {
 
   handleResetClick = () => {
     this.setState({
-      value: 0
+      value: this.props.initialValue
     })
   }
 
