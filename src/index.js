@@ -1,12 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import App from './components/App'
+
 ReactDOM.render(
-  <div
-    id="foo"
-    className="welcome"
-  >
-    Hello
-  </div>,
+  <App />,
   document.getElementById('root')
 )
