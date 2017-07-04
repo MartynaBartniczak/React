@@ -8,7 +8,7 @@ export default class Counter extends React.Component {
 
   updateValue = (delta) => {
     this.setState({
-      value: this.state.value + delta
+      value: this.state.value + delta * (this.props.delta || 1)
     })
   }
 

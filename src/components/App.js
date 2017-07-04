@@ -7,6 +7,11 @@ export default class App extends React.Component {
     return (
       <div>
         <Counter />
+        <Counter />
+        <Counter delta={100}/>
+        <Counter />
+        <Counter />
+        <Counter />
       </div>
     )
   }
