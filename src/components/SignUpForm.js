@@ -4,13 +4,14 @@ export default class SignUpForm extends React.Component {
 
   state = {
     username: '',
-    users: ['abc']
+    users: []
   }
 
   handleSubmit = event => {
     event.preventDefault()
     this.setState({
-      users: this.state.users.concat(this.state.username)
+      username: '',
+      users: this.state.users.concat(this.state.username),
     })
   }
 
@@ -33,7 +34,15 @@ export default class SignUpForm extends React.Component {
         </form>
 
         <div>
-          {this.state.users.map(username => <p>{username}</p>)}
+          {
+            this.state.users.map(
+              function (username) {
+                return (
+                  <p>{username}</p>
+                )
+              }
+            )
+          }
         </div>
       </div>
     )
