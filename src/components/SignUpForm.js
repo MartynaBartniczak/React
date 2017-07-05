@@ -36,9 +36,9 @@ export default class SignUpForm extends React.Component {
         <div>
           {
             this.state.users.map(
-              function (username) {
+              function (username, index) {
                 return (
-                  <p>{username}</p>
+                  <p key={index}>{username}</p>
                 )
               }
             )
