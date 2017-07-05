@@ -1,4 +1,5 @@
 import React from 'react'
+import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 import Counter from './Counter'
 
