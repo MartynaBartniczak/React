@@ -8,6 +8,7 @@ export default class SignUpForm extends React.Component {
   }
 
   componentWillMount() {
+    console.log(this.secondInput)
     this.setState(
       JSON.parse(localStorage.getItem('state'))
     )
@@ -27,7 +28,12 @@ export default class SignUpForm extends React.Component {
     })
   }
 
+  componentDidMount() {
+    console.log(this.secondInput)
+  }
+
   render() {
+    console.log(this.secondInput)
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -35,6 +41,10 @@ export default class SignUpForm extends React.Component {
           <input
             value={this.state.username}
             onChange={this.handleUsernameChange}
+          />
+          <input
+            ref={element => this.secondInput = element}
+            defaultValue={500}
           />
           <button>Save</button>
         </form>
