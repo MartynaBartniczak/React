@@ -1,49 +1,66 @@
 import React from 'react'
 
+import Button from './Button'
+
+import './Counter.css'
+
 export default class Counter extends React.Component {
 
   state = {
-    value: 0
+    value: this.props.initialValue
+  }
+
+  updateValue = (delta) => {
+    this.setState({
+      value: this.state.value + delta * (this.props.delta || 1)
+    })
   }
 
   handleIncrementClick = () => {
-    this.setState({
-      value: this.state.value + 1
-    })
+    this.updateValue(1)
   }
 
   handleDecrementClick = () => {
-    this.setState({
-      value: this.state.value - 1
-    })
+    this.updateValue(-1)
   }
+
   handleResetClick = () => {
     this.setState({
-      value: 0
+      value: this.props.initialValue
     })
   }
 
   render() {
+    console.log(this.props)
+
     return (
-      <div>
+      <div className="Counter">
         <h1>Counter</h1>
+        <h2>{this.props.sharedValue}</h2>
         <h2>{this.state.value}</h2>
-        <div>
-          <button
+        <div className="Counter__buttons">
+          <Button
+            onClick={this.props.handleZupa}
+          >
+            Awesome Increase
+          </Button>
+          <Button
             onClick={this.handleIncrementClick}
           >
             Increase
-          </button>
-          <button
+          </Button>
+
+          <Button
             onClick={this.handleDecrementClick}
           >
-            Decrease
-          </button>
-          <button
+            Decrement
+          </Button>
+
+          <Button
             onClick={this.handleResetClick}
           >
             Reset
-          </button>
+          </Button>
         </div>
       </div>
     )
