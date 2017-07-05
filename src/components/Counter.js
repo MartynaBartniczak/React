@@ -30,8 +30,6 @@ export default class Counter extends React.Component {
   }
 
   render() {
-    console.log(this.props)
-
     return (
       <div className="Counter">
         <h1>Counter</h1>
