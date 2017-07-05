@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Button from './Button'
+import { Button } from 'react-bootstrap'
 
 import './Counter.css'
 
@@ -40,23 +39,28 @@ export default class Counter extends React.Component {
         <h2>{this.state.value}</h2>
         <div className="Counter__buttons">
           <Button
+            bsStyle="info"
             onClick={this.props.handleZupa}
           >
             Awesome Increase
           </Button>
           <Button
+            bsStyle="danger"
             onClick={this.handleIncrementClick}
           >
             Increase
           </Button>
 
           <Button
+            bsStyle="warning"
             onClick={this.handleDecrementClick}
           >
             Decrement
           </Button>
 
           <Button
+            bsStyle="success"
+            bsSize="large"
             onClick={this.handleResetClick}
           >
             Reset
