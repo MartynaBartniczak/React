@@ -41,6 +41,7 @@ export default class Counter extends React.Component {
         <div className="Counter__buttons">
           <Button
             onClick={this.props.handleZupa}
+            extraClassName="zupa"
           >
             Awesome Increase
           </Button>

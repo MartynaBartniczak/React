@@ -4,7 +4,7 @@ import './Button.css'
 
 const Button = (props) => (
   <button
-    className="Button"
+    className={'Button ' + (props.extraClassName || '')}
     onClick={props.onClick}
   >
     {props.children}
