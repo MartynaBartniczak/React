@@ -8,6 +8,7 @@ import {
 } from 'react-bootstrap'
 
 import Counter from './Counter'
+import SignUpForm from './SignUpForm'
 
 export default class App extends React.Component {
 
@@ -42,6 +43,9 @@ export default class App extends React.Component {
             </NavDropdown>
           </Nav>
         </Navbar>
+
+        <SignUpForm/>
+
         <Counter
           initialValue={1}
           handleZupa={this.increaseCommonCounter}
