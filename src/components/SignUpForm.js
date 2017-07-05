@@ -7,12 +7,18 @@ export default class SignUpForm extends React.Component {
     users: []
   }
 
+  componentWillMount() {
+    this.setState(
+      JSON.parse(localStorage.getItem('state'))
+    )
+  }
+
   handleSubmit = event => {
     event.preventDefault()
     this.setState({
       username: '',
       users: this.state.users.concat(this.state.username),
-    })
+    }, () => localStorage.setItem('state', JSON.stringify(this.state)))
   }
 
   handleUsernameChange = event => {
