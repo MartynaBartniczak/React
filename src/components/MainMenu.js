@@ -1,8 +1,6 @@
 import React from 'react'
 import {Nav, Navbar, MenuItem, NavDropdown, NavItem} from 'react-bootstrap'
 
-import './MainMenu.css'
-
 export default class MainMenu extends React.Component {
 
   render () {

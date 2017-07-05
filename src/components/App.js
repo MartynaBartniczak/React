@@ -1,8 +1,8 @@
 import React from 'react'
 
-
 import Counter from './Counter'
 import MainMenu from './MainMenu'
+import MainForm from './MainForm'
 
 
 export default class App extends React.Component {
@@ -21,7 +21,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-          <MainMenu/>
+        <MainMenu/>
+        <MainForm/>
 
         <Counter
           initialValue={1}
