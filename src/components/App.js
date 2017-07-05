@@ -2,6 +2,7 @@ import React from 'react'
 
 import Counter from './Counter'
 import MainMenu from './MainMenu'
+import MainForm from './MainForm'
 
 export default class App extends React.Component {
 
@@ -19,6 +20,7 @@ export default class App extends React.Component {
     return (
       <div>
         <MainMenu/>
+        <MainForm/>
         <Counter
           initialValue={1}
           handleZupa={this.increaseCommonCounter}
