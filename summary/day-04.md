@@ -7,5 +7,6 @@
   - destructuring (`const { x, y } = point`)
 - working with async data using fetch and Promises
 - filtering and sorting
+- bind!!!!!
 - browser features:
  - fetch

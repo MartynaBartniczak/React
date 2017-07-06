@@ -8,7 +8,7 @@ export default class SignUpForm extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.secondInput)
+    // console.log(this.secondInput)
     this.setState(
       JSON.parse(localStorage.getItem('state'))
     )
@@ -19,7 +19,12 @@ export default class SignUpForm extends React.Component {
     this.setState({
       username: '',
       users: this.state.users.concat(this.state.username),
-    }, () => localStorage.setItem('state', JSON.stringify(this.state)))
+    }, () => {
+      // console.log('B', this.state.username)
+      localStorage.setItem('state', JSON.stringify(this.state))
+    })
+
+    // console.log('A', this.state.username)
   }
 
   handleUsernameChange = event => {
@@ -29,11 +34,11 @@ export default class SignUpForm extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.secondInput)
+    // console.log(this.secondInput)
   }
 
   render() {
-    console.log(this.secondInput)
+    // console.log(this.secondInput)
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
