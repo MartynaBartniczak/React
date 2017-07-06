@@ -12,9 +12,7 @@ const MainMenu = (props) => (
     <Navbar.Header>
       <Navbar.Brand>
         <a href="/">
-          {props.mainMenuAppNamePrefix}
-          {props.appName}
-          {props.color}
+          Zupa
         </a>
       </Navbar.Brand>
     </Navbar.Header>
@@ -26,7 +24,7 @@ const MainMenu = (props) => (
         <MenuItem eventKey={3.2}>Another action</MenuItem>
         <MenuItem eventKey={3.3}>Something else here</MenuItem>
         <MenuItem divider />
-        <MenuItem eventKey={3.4}>The life of {props.hero}</MenuItem>
+        <MenuItem eventKey={3.4}>The life of Zupa</MenuItem>
       </NavDropdown>
     </Nav>
   </Navbar>

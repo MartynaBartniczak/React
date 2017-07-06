@@ -19,18 +19,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <MainMenu
-          color="red"
-          appName={this.props.name}
-          hero={this.props.author}
-        />
+        <MainMenu/>
 
-        <MainMenu
-
-          appName={this.props.name}
-          {...this.props}
-          color="red"
-        />
 
         <h1>{this.props.name}</h1>
         <p>Created by: {this.props.author}</p>
