@@ -9,6 +9,11 @@ import App from './components/App'
 
 
 ReactDOM.render(
-  <App />,
+  <App
+    color="green"
+    name="Super Zupa"
+    author="Chuck Norris"
+    mainMenuAppNamePrefix="<3"
+  />,
   document.getElementById('root')
 )

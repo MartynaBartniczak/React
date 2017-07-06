@@ -7,11 +7,15 @@ import {
   NavDropdown
 } from 'react-bootstrap'
 
-const MainMenu = () => (
+const MainMenu = (props) => (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="/">React-Bootstrap</a>
+        <a href="/">
+          {props.mainMenuAppNamePrefix}
+          {props.appName}
+          {props.color}
+        </a>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
@@ -22,7 +26,7 @@ const MainMenu = () => (
         <MenuItem eventKey={3.2}>Another action</MenuItem>
         <MenuItem eventKey={3.3}>Something else here</MenuItem>
         <MenuItem divider />
-        <MenuItem eventKey={3.4}>Separated link</MenuItem>
+        <MenuItem eventKey={3.4}>The life of {props.hero}</MenuItem>
       </NavDropdown>
     </Nav>
   </Navbar>
