@@ -3,6 +3,7 @@ import React from 'react'
 import Counter from './Counter'
 import SignUpForm from './SignUpForm'
 import MainMenu from './MainMenu'
+import Employees from './Employees'
 
 export default class App extends React.Component {
 
@@ -21,6 +22,7 @@ export default class App extends React.Component {
       <div>
         <MainMenu/>
 
+        <Employees/>
 
         <h1>{this.props.name}</h1>
         <p>Created by: {this.props.author}</p>
