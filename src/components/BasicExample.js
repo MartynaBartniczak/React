@@ -14,11 +14,6 @@ const BasicExample = () => (
   <Router>
     <div>
       <MainMenu/>
-      <ul>
-        <li><Link to="/">Sign Up</Link></li>
-        <li><Link to="/counters">Counters</Link></li>
-        <li><Link to="/employees">Employees</Link></li>
-      </ul>
 
       <hr/>
 
