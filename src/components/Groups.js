@@ -39,7 +39,7 @@ export default class Groups extends React.Component {
         <h1>Groups</h1>
         <ul>
           {
-            this.state !== null && this.state.groups.map(
+            this.state.groups.map(
               group => (
                 <li key={group.id}>
                   {group.name}
@@ -49,6 +49,8 @@ export default class Groups extends React.Component {
                         studentId => this.state.students.find(
                           student => student.id === studentId
                         )
+                      ).filter(
+                        student => student !== undefined
                       ).map(
                         student => <li key={student.id}>{student.name}</li>
                       )
