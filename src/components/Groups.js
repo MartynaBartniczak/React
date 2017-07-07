@@ -41,15 +41,22 @@ export default class Groups extends React.Component {
         <ul>
           {
             this.state !== null && this.state.groups.map(
-              group => <li key={group.id}>{group.name}</li>
-            )
-          }
-        </ul>
-        <h1>Students</h1>
-        <ul>
-          {
-            this.state !== null && this.state.students.map(
-              student => <li key={student.id}>{student.name}</li>
+              group => (
+                <li key={group.id}>
+                  {group.name}
+                  <ul>
+                    {
+                      group.studentIds.map(
+                        studentId => this.state.students.find(
+                          student => student.id === studentId
+                        )
+                      ).map(
+                        student => <li key={student.id}>{student.name}</li>
+                      )
+                    }
+                  </ul>
+                </li>
+              )
             )
           }
         </ul>
