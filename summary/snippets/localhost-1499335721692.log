@@ -1,0 +1,217 @@
+var x = fetch('http://rest.learncode.academy/api/johnbob/friends')
+x.then(response => console.log(response))
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2549:2 Response {type: "cors", url: "http://rest.learncode.academy/api/johnbob/friends", redirected: false, status: 200, ok: true…}body: ReadableStreamlocked: false__proto__: ObjectbodyUsed: falseheaders: Headers__proto__: Headersappend: function append()delete: function delete()entries: function entries()forEach: function forEach()get: function get()getAll: function getAll()has: function has()keys: function keys()set: function set()values: function values()constructor: function Headers()Symbol(Symbol.iterator): function ()Symbol(Symbol.toStringTag): "Headers"__proto__: Objectok: trueredirected: falsestatus: 200statusText: "OK"type: "cors"url: "http://rest.learncode.academy/api/johnbob/friends"__proto__: Response
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(data)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2625:6 (238) ["", "", "", "", "", "", "", Array(3), Array(1), Array(1), Array(1), Array(1), Array(1), "", "", "", Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object…][0 … 99][100 … 199][200 … 237]length: 238__proto__: Array(0)
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.text()
+).then(
+  data => console.log(data)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2629:6 ["","","","","","","",[{"name":"Best","age":"29"},{"name":"Michael","age":"34"},{"name":"Genevieve","age":"26"}],[{"name":"","age":"","id":"5829d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"","id":"5829d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"","id":"3333d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"CHEA","id":"3333d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"CHEA","id":"3333d81e85dfd50100244268"}],"","","",{"name":"johny","age":"21","id":"59412fba9d40d80100da4ca0"},{"name":"Lava","age":"thefloor","id":"594130889d40d80100da4ca5"},{"name":"Kol","age":"21","id":"594130fe639842010070911b"},{"name":"Helga","age":"80","id":"59413169639842010070911c"},{"name":"Jiies","age":"22","id":"59413191639842010070911d"},{"name":"help","age":"22","id":"59413245639842010070911e"},{"name":"noo","age":"233","id":"59413279639842010070911f"},{"name":"Oj","age":"44","id":"5941364b6398420100709121"},{"name":"paul","id":"594208bfeba71401002d2004"},{"name":"paul","id":"59420904eba71401002d2005"},{"name":"paul","id":"59420932eba71401002d2006"},{"name":"Billy Bob","age":"27","id":"5944dc5578dae601002d1127"},{"name":"Billy Bob","age":"27","id":"5947deed93b94a0100d37acb"},{"name":"Kris","drink":"15","id":"594b3684ab17ac0100d98b64"},{"name":"asdf","age":"asdf","id":"594b36eeab17ac0100d98b68"},{"name":"kris","age":"15","id":"594b36f5ab17ac0100d98b69"},{"name":"Billy Bob","age":"27","id":"594bfc2b38b17c0100892a93"},{"name":"Billy Bob","age":"27","id":"594bfc6538b17c0100892a95"},{"name":"Billy Bob","age":"27","id":"594bfe5c38b17c0100892ab5"},{"name":"Billy Bob","age":"27","id":"594c010f38b17c0100892c58"},{"name":"Billy Joe","age":"36","id":"594c014238b17c0100892c5f"},{"name":"Billy Joe","age":"36","id":"594c016b38b17c0100892c62"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c63"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c65"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c67"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c68"},{"name":"Rutanshu","age":"17","id":"594ce5ee7449130100c2ac0c"},{"name":"Rutanshu","age":"17","id":"594ce5f67449130100c2ac0d"},{"name":"Rutanshu","age":"17","id":"594ce6347449130100c2ac0e"},{"name":"enjoy life","age":"32","id":"594ce6e97449130100c2ac0f"},{"name":"lol","age":"34","id":"594ce7ab7449130100c2ac10"},{"name":"Monika","age":"21","id":"59500ee23bbb800100d2ae6d"},{"name":"Zosia","age":"34","id":"59500eeb3bbb800100d2ae6e"},{"name":"Mukul Barthwal","drink":"as","id":"59527e9bb5ad1f01001c565b"},{"name":"Jeremiah","age":"28","id":"595311e3d4eb180100b937ae"},{"name":"Selah","age":"1","id":"5953147cd4eb180100b937af"},{"name":"Roland Tacadena","age":"28","id":"5953475e0a05180100a51b03"},{"name":"Angel","age":"30","id":"59534ac90a05180100a51b04"},{"name":"sandeep","age":"23","id":"59552aaff4bf4901001beb9b"},{"name":"jon","age":"43","id":"59552ac1f4bf4901001beb9c"},{"name":"Billy Bob Stan","age":"29","id":"5955fa7a62d16d0100b5f18c"},{"name":"Billy Bob Stan","age":"29","id":"5955fc3362d16d0100b5f191"},{"name":"Billy Bob Stan","age":"29","id":"5955fcd662d16d0100b5f19a"},{"name":"Stan","age":"29","id":"5955fcf262d16d0100b5f19b"},{"name":"Stan test","age":"29","id":"5955fd1162d16d0100b5f19c"},{"id":"5955fe3f62d16d0100b5f19e","category":{"id":"0","name":"string"},"name":"Amy","photoUrls":["string"],"tags":[{"id":"0","name":"string"}],"status":"available"},{"id":"5955fea262d16d0100b5f1a0","category":{"id":"0","name":"string"},"name":"Amy","photoUrls":["string"],"tags":[{"id":"0","name":"string"}],"status":"available"},{"name":"Stan test","age":"29","id":"595605d862d16d0100b5f1a3"},{"name":"Stan test","age":"29","id":"595613ad62d16d0100b5f1a4"},{"name":"Billy Bob","age":"27","id":"59569e9a223e0f01002b110e"},{"name":"Billy Bob","age":"27","id":"595809b1b92462010034817a"},{"name":"Billy Bob","age":"27","id":"59580a00b92462010034817b"},{"name":"Billy Bob","age":"27","id":"59580a57b92462010034817c"},{"name":"Billy Bob","age":"27","id":"59580a73b92462010034817d"},{"name":"Billy Bob","age":"27","id":"59580ad3b92462010034817e"},{"name":"Billy Bob","age":"27","id":"59580aeeb92462010034817f"},{"name":"Billy Bob","age":"27","id":"59580af2b924620100348180"},{"name":"Billy Bob","age":"27","id":"59580af3b924620100348181"},{"name":"Billy Bob","age":"27","id":"59580af4b924620100348183"},{"name":"Billy Bob","age":"27","id":"59580af3b924620100348182"},{"name":"Billy Bob","age":"27","id":"59580b0eba5f6b01001e79ef"},{"name":"Nick","drink":"SuperGoodCoffe","id":"5958646205d346010096d6d0"},{"name":"Nick","drink":"SuperGoodCoffee","id":"595864d805d346010096d6d1"},{"name":"Nick","drink":"OkCoffee","id":"5958651805d346010096d6d2"},{"name":"Billy Bob","age":"27","id":"5958664605d346010096d6d3"},{"name":"Billy Bob","age":"27","id":"5958666005d346010096d6d4"},{"Name":"Sravani","Age":"22","id":"5959008bee43f9010021399e"},{"Name":"Sravani","Age":"22","id":"59590090ee43f9010021399f"},{"name":"Sravani","age":21,"id":"59590286ee43f901002139a0"},{"name":"abhi","age":23,"id":"59593b631e92710100b1957c"},{"name":"Vincent","age":"26","id":"5959903c30038e0100e27e91"},{"name":"Billy Bob","age":"27","id":"5959a4e230038e0100e27e95"},{"id":"5959ad3230038e0100e27e99"},{"id":"5959ad8530038e0100e27e9a"},{"id":"5959adee30038e0100e27e9b"},{"name":"AddtestX","age":"123","id":"5959c6cfce95bf0100fee069"},{"name":"Nikko","age":"120","id":"5959d149ce95bf0100fee074"},{"name":"hai lolita","age":"12","editable":"false","id":"5959e2844d92510100a15977"},{"name":"fsdf","age":"12","editable":"false","id":"5959e28d4d92510100a15978"},{"name":"dsad","age":"sda","editable":"false","id":"5959e2a64d92510100a15979"},{"name":"","age":"","editable":"false","id":"5959e2c44d92510100a1597a"},{"name":"Billy Bob","age":"27","id":"5959e8c44d92510100a1597d"},{"name":"Billy Bob","age":"27","id":"5959e8ef4d92510100a1597e"},{"name":"Billy Bob","age":"27","id":"5959e96c4d92510100a1597f"},{"name":"Billy Bob","age":"27","id":"5959e9ab4d92510100a15980"},{"name":"Billy Bob","age":"27","id":"5959e9d14d92510100a15981"},{"name":"Billy Bob","age":"27","id":"5959ea204d92510100a15982"},{"name":"Billy Bob","age":"27","id":"5959ea224d92510100a15983"},{"name":"Billy Bob","age":"27","id":"5959eaa84d92510100a15984"},{"name":"Billy Bob","age":"27","id":"5959eaa94d92510100a15985"},{"name":"Billy Bob","age":"27","id":"5959eabe4d92510100a15986"},{"name":"Billy Bob","age":"27","id":"5959ead94d92510100a15987"},{"name":"Billy Bob","age":"27","id":"5959eaec4d92510100a15988"},{"name":"Billy Bob","age":"27","id":"5959eb1d4d92510100a15989"},{"name":"Billy Bob","age":"27","id":"5959eb684d92510100a1598a"},{"name":"Billy Bob","age":"27","id":"5959eb6d4d92510100a1598b"},{"name":"Billy Bob","age":"27","id":"5959eb7c4d92510100a1598c"},{"name":"Billy Bob","age":"27","id":"5959eb844d92510100a1598d"},{"name":"Billy Bob","age":"27","id":"5959eb874d92510100a1598e"},{"name":"Billy Bob","age":"27","id":"5959ebf84d92510100a1598f"},{"name":"Billy Bob","age":"27","id":"5959ec054d92510100a15990"},{"name":"Billy Bob","age":"27","id":"5959ed6d4d92510100a15991"},{"name":"Billy Bob","age":"27","id":"5959ed714d92510100a15992"},{"name":"Billy Bob","age":"27","id":"5959edf54d92510100a15993"},{"name":"Aaron","age":"27","id":"5959edfa4d92510100a15994"},{"name":"allan","age":"32","id":"5959eea74d92510100a15995"},{"name":"arkin angelo","age":"11","id":"5959f0124d92510100a15996"},{"name":"Aaron Allan","age":"31","id":"5959f0674d92510100a15997"},{"name":"Aaron Allan","age":"31","id":"5959f0934d92510100a15998"},{"name":"Aaron Allan","age":"31","id":"5959f0ad4d92510100a15999"},{"name":"Aaron Allan","age":"31","id":"5959f0ba4d92510100a1599a"},{"name":"Aaron Allan","age":"31","id":"5959f0d44d92510100a1599b"},{"name":"test","age":"testing","id":"5959f0e44d92510100a1599c"},{"name":"testing1","age":"testing1","id":"5959f0f94d92510100a1599d"},{"name":"Aaron Allan","age":"31","id":"5959f1374d92510100a1599e"},{"name":"Aaron Allan","age":"31","id":"5959f1534d92510100a1599f"},{"name":"Allan Allan","age":"32","id":"5959fa654d92510100a159a3"},{"name":"Hurray","age":"yes","id":"5959fb554d92510100a159a5"},{"name":"Hurray1","age":"yes","id":"5959fb604d92510100a159a6"},{"name":"Allan","age":"32","id":"5959fe564d92510100a159a8"},{"format":"json","id":"595a01c94d92510100a159a9"},{"name":"Angel","age":"29","id":"595a02524d92510100a159aa"},{"name":"Angel","age":"29","id":"595a030b4d92510100a159ab"},{"name":"Allan Suaco","age":"32","id":"595a03f64d92510100a159ac"},{"name":"Neal","age":"31","id":"595a04474d92510100a159ad"},{"name":"Allan","age":"32","id":"595a04504d92510100a159ae"},{"name":"Toffee","age":"32","id":"595a2305da94cc01009d2aae"},{"name":"user1","age":"11","id":"595a24d8da94cc01009d2aaf"},{"name":"aaaa","age":"1","id":"595a2630da94cc01009d2ab0"},{"name":"vvvv","age":"2","id":"595a2634da94cc01009d2ab1"},{"name":"ssss","age":"34","id":"595a263dda94cc01009d2ab2"},{"name":"aaaa","age":"22","id":"595a26f5da94cc01009d2ab3"},{"name":"vvvv","age":"33","id":"595a26fbda94cc01009d2ab4"},{"name":"aaaa","age":"11","id":"595a271bda94cc01009d2ab5"},{"name":"aaaa","age":"11","id":"595a3cc7da94cc01009d2ac4"},{"name":"aaaa","age":"32","id":"595a3fe4da94cc01009d2ac5"},{"name":"aaa","age":"33","id":"595a4017da94cc01009d2ac6"},{"name":"John","drink":"Cofee","id":"595a40b4da94cc01009d2ac7"},{"name":"aaa","age":"32","id":"595a40e3da94cc01009d2ac8"},{"name":"Allan","age":"32","id":"595a4102da94cc01009d2ac9"},{"name":"Angel","age":"29","id":"595a4109da94cc01009d2aca"},{"name":"Allan","age":"32","id":"595a418ada94cc01009d2acb"},{"name":"Angel","age":"29","id":"595a4192da94cc01009d2acc"},{"name":"Milos","drink":"Pepsi","id":"595a428ada94cc01009d2acd"},{"name":"Anja","drink":"Lemonade","id":"595a58c3f50e0e0100361f01"},{"name":"xxxx","age":"11","id":"595c6313a41f930100893b16"},{"name":"xxxx","age":"11","id":"595c64f3a41f930100893b17"},{"name":"xxx","age":"11","id":"595c6555a41f930100893b18"},{"name":"aaaa","age":"32","id":"595c69f0a41f930100893b19"},{"name":"xxxx","age":"12","id":"595c6b70a41f930100893b1a"},{"name":"xxxx","age":"11","id":"595c6c3aa41f930100893b1b"},{"name":"aaaa","age":"23","id":"595c6c55a41f930100893b1c"},{"name":"xxxx","age":"11","id":"595c6ca9a41f930100893b1d"},{"name":"Allan Suaco","age":"32","id":"595c7196a41f930100893b1e"},{"name":"Allan Suaco","age":"32","id":"595c71f0a41f930100893b1f"},{"name":"Allan Suaco","age":"32","id":"595c7228a41f930100893b20"},{"name":"Allan Suaco","age":"32","id":"595c7270a41f930100893b21"},{"name":"xxxxx","age":"11","id":"595c738ca41f930100893b22"},{"name":"xxxx","age":"11","id":"595c7399a41f930100893b23"},{"name":"aaaa","age":"21","id":"595c73aaa41f930100893b24"},{"name":"xxxx","age":"11","id":"595c7413a41f930100893b25"},{"name":"user1","age":"23","id":"595c7572a41f930100893b27"},{"name":"user2","age":"32","id":"595c7578a41f930100893b28"},{"name":"Allan Suaco","age":"32","id":"595c78055bf2280100a33ed2"},{"name":"User1","age":"32","id":"595c780c5bf2280100a33ed3"},{"name":"Allan Suaco","age":"32","id":"595c78e75bf2280100a33ed4"},{"name":"user1","age":"32","id":"595c78ec5bf2280100a33ed5"},{"name":"user1","age":"11","id":"595c795e5bf2280100a33ed6"},{"name":"user2","age":"11","id":"595c79615bf2280100a33ed7"},{"name":"adfasfas","age":"11","id":"595c79d05bf2280100a33ed8"},{"name":"dfdfdf","age":"22","id":"595c79d55bf2280100a33ed9"},{"name":"sadfadfas","age":"11","id":"595c7a1a5bf2280100a33eda"},{"name":"ddd","age":"2","id":"595c7a1e5bf2280100a33edb"},{"name":"sdfsaf","age":"11","id":"595c7a9b5bf2280100a33edc"},{"name":"dddd","age":"11","id":"595c7aa05bf2280100a33edd"},{"name":"aaaa","age":"11","id":"595c7aec5bf2280100a33ede"},{"name":"aaaa","age":"11","id":"595c7aed5bf2280100a33edf"},{"name":"aaaaa","age":"11","id":"595c7b6a5bf2280100a33ee0"},{"name":"aaaaa","age":"11","id":"595c7b6b5bf2280100a33ee1"},{"name":"aaaa","age":"11","id":"595c7d465bf2280100a33ee3"},{"name":"aaaa","age":"11","id":"595c7d485bf2280100a33ee4"},{"name":"aaaa","age":"11","id":"595c7d4a5bf2280100a33ee5"},{"name":"user1","age":"11","id":"595c80ff5bf2280100a33ee6"},{"name":"user2","age":"11","id":"595c81025bf2280100a33ee7"},{"name":"user1","age":"12","id":"595c81405bf2280100a33ee8"},{"name":"user2","age":"12","id":"595c81445bf2280100a33ee9"},{"name":"user1","age":"12","id":"595c81525bf2280100a33eea"},{"name":"user2","age":"12","id":"595c81565bf2280100a33eeb"},{"name":"user1","age":"12","id":"595c81e55bf2280100a33eec"},{"name":"user2","age":"12","id":"595c81e95bf2280100a33eed"},{"name":"allan suaco","age":"32","id":"595c8b5a5bf2280100a33ef1"},{"name":"arkin","age":"7","id":"595c8b625bf2280100a33ef2"},{"name":"angelica","age":"29","id":"595c8d385bf2280100a33ef3"},{"name":"allan","age":"32","id":"595c8d405bf2280100a33ef4"},{"name":"dafafdad","age":"1","id":"595c8d765bf2280100a33ef5"},{"name":"dafafdad","age":"2","id":"595c8d795bf2280100a33ef6"},{"name":"dafasfas","age":"123","id":"595c8f155bf2280100a33ef7"},{"name":"dafasfas","age":"232","id":"595c8f195bf2280100a33ef8"},{"name":"adfsafs","age":"1","id":"595c910b5bf2280100a33efa"},{"name":"adfsafs","age":"2","id":"595c910e5bf2280100a33efb"},{"name":"dafasf","age":"1","id":"595c924c5bf2280100a33efc"},{"name":"dafasf","age":"1","id":"595c924c5bf2280100a33efd"},{"name":"dafafsa","age":"11","id":"595c925a5bf2280100a33efe"},{"name":"dafafsa","age":"12","id":"595c925d5bf2280100a33eff"},{"name":"Billy Bob","age":"27","id":"595cac5c5bf2280100a33f0d"},{"name":"Billy Bob","age":"27","id":"595cace65bf2280100a33f0e"},{"name":"Billy Bob","age":"27","id":"595cb0435bf2280100a33f14"},{"name":"Shauwn Bob","age":"17","id":"595cb0805bf2280100a33f15"},{"name":"Dewie Bob","age":"17","id":"595cb0cb5bf2280100a33f16"},{"name":"sdfsdfs","age":"11","id":"595ce39249fd9a0100268a82"},{"name":"allan suaco","age":"32","id":"595ce64949fd9a0100268a8b"},{"name":"allan suaco 1","age":"21","id":"595ce6c449fd9a0100268a8c"},{"name":"allan2","age":"32","id":"595ce7bf49fd9a0100268a94"},{"name":"user 1","age":"32","id":"595ce88849fd9a0100268a96"},{"name":"asdfasdfsa","age":"1","id":"595ce9f549fd9a0100268a97"},{"name":"aaaaa","age":"1","id":"595cea1449fd9a0100268a98"},{"name":"adfsafsa","age":"32","id":"595ced9b49fd9a0100268a9a"},{"name":"dafafa","age":"100","id":"595cf1ca49fd9a0100268aa0"},{"name":"dddddd","age":"111","id":"595cf25d49fd9a0100268aa1"},{"name":"aaa","age":"11","id":"595cf2ba49fd9a0100268aa2"},{"name":"dafasfsa","age":"123","id":"595cf3dd49fd9a0100268aa3"},{"name":"adfadfa","age":"12","id":"595cf70f49fd9a0100268aa4"}]
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.text()
+).then(
+  data => console.log(data)
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2702:1 GET http://rest.learncode.academy/api/johnbob/friends net::ERR_INTERNET_DISCONNECTED
+(anonymous) @ VM2702:1
+VM2702:8 Failed to fetch
+fetch(
+  'http://localhost:3000'
+).then(
+  response => response.text()
+).then(
+  data => console.log(data)
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2704:1 GET http://localhost:3000/ net::ERR_INTERNET_DISCONNECTED
+(anonymous) @ VM2704:1
+VM2704:8 Failed to fetch
+fetch(
+  'http://localhost:3000'
+).then(
+  response => response.text()
+).then(
+  data => console.log(data)
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2705:6 <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="/static/js/bundle.js"></script></body>
+</html>
+
+fetch(
+  'http://localhost:3000'
+).then(
+  response => response.json()
+).then(
+  data => console.log(data)
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2709:8 Unexpected token < in JSON at position 0
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.text()
+).then(
+  data => console.log(data)
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2712:6 ["","","","","","","",[{"name":"Best","age":"29"},{"name":"Michael","age":"34"},{"name":"Genevieve","age":"26"}],[{"name":"","age":"","id":"5829d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"","id":"5829d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"","id":"3333d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"CHEA","id":"3333d81e85dfd50100244268"}],[{"name":"asdfaasdf","age":"CHEA","id":"3333d81e85dfd50100244268"}],"","","",{"name":"johny","age":"21","id":"59412fba9d40d80100da4ca0"},{"name":"Lava","age":"thefloor","id":"594130889d40d80100da4ca5"},{"name":"Kol","age":"21","id":"594130fe639842010070911b"},{"name":"Helga","age":"80","id":"59413169639842010070911c"},{"name":"Jiies","age":"22","id":"59413191639842010070911d"},{"name":"help","age":"22","id":"59413245639842010070911e"},{"name":"noo","age":"233","id":"59413279639842010070911f"},{"name":"Oj","age":"44","id":"5941364b6398420100709121"},{"name":"paul","id":"594208bfeba71401002d2004"},{"name":"paul","id":"59420904eba71401002d2005"},{"name":"paul","id":"59420932eba71401002d2006"},{"name":"Billy Bob","age":"27","id":"5944dc5578dae601002d1127"},{"name":"Billy Bob","age":"27","id":"5947deed93b94a0100d37acb"},{"name":"Kris","drink":"15","id":"594b3684ab17ac0100d98b64"},{"name":"asdf","age":"asdf","id":"594b36eeab17ac0100d98b68"},{"name":"kris","age":"15","id":"594b36f5ab17ac0100d98b69"},{"name":"Billy Bob","age":"27","id":"594bfc2b38b17c0100892a93"},{"name":"Billy Bob","age":"27","id":"594bfc6538b17c0100892a95"},{"name":"Billy Bob","age":"27","id":"594bfe5c38b17c0100892ab5"},{"name":"Billy Bob","age":"27","id":"594c010f38b17c0100892c58"},{"name":"Billy Joe","age":"36","id":"594c014238b17c0100892c5f"},{"name":"Billy Joe","age":"36","id":"594c016b38b17c0100892c62"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c63"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c65"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c67"},{"name":"caca","age":"1","id":"594c080b38b17c0100892c68"},{"name":"Rutanshu","age":"17","id":"594ce5ee7449130100c2ac0c"},{"name":"Rutanshu","age":"17","id":"594ce5f67449130100c2ac0d"},{"name":"Rutanshu","age":"17","id":"594ce6347449130100c2ac0e"},{"name":"enjoy life","age":"32","id":"594ce6e97449130100c2ac0f"},{"name":"lol","age":"34","id":"594ce7ab7449130100c2ac10"},{"name":"Monika","age":"21","id":"59500ee23bbb800100d2ae6d"},{"name":"Zosia","age":"34","id":"59500eeb3bbb800100d2ae6e"},{"name":"Mukul Barthwal","drink":"as","id":"59527e9bb5ad1f01001c565b"},{"name":"Jeremiah","age":"28","id":"595311e3d4eb180100b937ae"},{"name":"Selah","age":"1","id":"5953147cd4eb180100b937af"},{"name":"Roland Tacadena","age":"28","id":"5953475e0a05180100a51b03"},{"name":"Angel","age":"30","id":"59534ac90a05180100a51b04"},{"name":"sandeep","age":"23","id":"59552aaff4bf4901001beb9b"},{"name":"jon","age":"43","id":"59552ac1f4bf4901001beb9c"},{"name":"Billy Bob Stan","age":"29","id":"5955fa7a62d16d0100b5f18c"},{"name":"Billy Bob Stan","age":"29","id":"5955fc3362d16d0100b5f191"},{"name":"Billy Bob Stan","age":"29","id":"5955fcd662d16d0100b5f19a"},{"name":"Stan","age":"29","id":"5955fcf262d16d0100b5f19b"},{"name":"Stan test","age":"29","id":"5955fd1162d16d0100b5f19c"},{"id":"5955fe3f62d16d0100b5f19e","category":{"id":"0","name":"string"},"name":"Amy","photoUrls":["string"],"tags":[{"id":"0","name":"string"}],"status":"available"},{"id":"5955fea262d16d0100b5f1a0","category":{"id":"0","name":"string"},"name":"Amy","photoUrls":["string"],"tags":[{"id":"0","name":"string"}],"status":"available"},{"name":"Stan test","age":"29","id":"595605d862d16d0100b5f1a3"},{"name":"Stan test","age":"29","id":"595613ad62d16d0100b5f1a4"},{"name":"Billy Bob","age":"27","id":"59569e9a223e0f01002b110e"},{"name":"Billy Bob","age":"27","id":"595809b1b92462010034817a"},{"name":"Billy Bob","age":"27","id":"59580a00b92462010034817b"},{"name":"Billy Bob","age":"27","id":"59580a57b92462010034817c"},{"name":"Billy Bob","age":"27","id":"59580a73b92462010034817d"},{"name":"Billy Bob","age":"27","id":"59580ad3b92462010034817e"},{"name":"Billy Bob","age":"27","id":"59580aeeb92462010034817f"},{"name":"Billy Bob","age":"27","id":"59580af2b924620100348180"},{"name":"Billy Bob","age":"27","id":"59580af3b924620100348181"},{"name":"Billy Bob","age":"27","id":"59580af4b924620100348183"},{"name":"Billy Bob","age":"27","id":"59580af3b924620100348182"},{"name":"Billy Bob","age":"27","id":"59580b0eba5f6b01001e79ef"},{"name":"Nick","drink":"SuperGoodCoffe","id":"5958646205d346010096d6d0"},{"name":"Nick","drink":"SuperGoodCoffee","id":"595864d805d346010096d6d1"},{"name":"Nick","drink":"OkCoffee","id":"5958651805d346010096d6d2"},{"name":"Billy Bob","age":"27","id":"5958664605d346010096d6d3"},{"name":"Billy Bob","age":"27","id":"5958666005d346010096d6d4"},{"Name":"Sravani","Age":"22","id":"5959008bee43f9010021399e"},{"Name":"Sravani","Age":"22","id":"59590090ee43f9010021399f"},{"name":"Sravani","age":21,"id":"59590286ee43f901002139a0"},{"name":"abhi","age":23,"id":"59593b631e92710100b1957c"},{"name":"Vincent","age":"26","id":"5959903c30038e0100e27e91"},{"name":"Billy Bob","age":"27","id":"5959a4e230038e0100e27e95"},{"id":"5959ad3230038e0100e27e99"},{"id":"5959ad8530038e0100e27e9a"},{"id":"5959adee30038e0100e27e9b"},{"name":"AddtestX","age":"123","id":"5959c6cfce95bf0100fee069"},{"name":"Nikko","age":"120","id":"5959d149ce95bf0100fee074"},{"name":"hai lolita","age":"12","editable":"false","id":"5959e2844d92510100a15977"},{"name":"fsdf","age":"12","editable":"false","id":"5959e28d4d92510100a15978"},{"name":"dsad","age":"sda","editable":"false","id":"5959e2a64d92510100a15979"},{"name":"","age":"","editable":"false","id":"5959e2c44d92510100a1597a"},{"name":"Billy Bob","age":"27","id":"5959e8c44d92510100a1597d"},{"name":"Billy Bob","age":"27","id":"5959e8ef4d92510100a1597e"},{"name":"Billy Bob","age":"27","id":"5959e96c4d92510100a1597f"},{"name":"Billy Bob","age":"27","id":"5959e9ab4d92510100a15980"},{"name":"Billy Bob","age":"27","id":"5959e9d14d92510100a15981"},{"name":"Billy Bob","age":"27","id":"5959ea204d92510100a15982"},{"name":"Billy Bob","age":"27","id":"5959ea224d92510100a15983"},{"name":"Billy Bob","age":"27","id":"5959eaa84d92510100a15984"},{"name":"Billy Bob","age":"27","id":"5959eaa94d92510100a15985"},{"name":"Billy Bob","age":"27","id":"5959eabe4d92510100a15986"},{"name":"Billy Bob","age":"27","id":"5959ead94d92510100a15987"},{"name":"Billy Bob","age":"27","id":"5959eaec4d92510100a15988"},{"name":"Billy Bob","age":"27","id":"5959eb1d4d92510100a15989"},{"name":"Billy Bob","age":"27","id":"5959eb684d92510100a1598a"},{"name":"Billy Bob","age":"27","id":"5959eb6d4d92510100a1598b"},{"name":"Billy Bob","age":"27","id":"5959eb7c4d92510100a1598c"},{"name":"Billy Bob","age":"27","id":"5959eb844d92510100a1598d"},{"name":"Billy Bob","age":"27","id":"5959eb874d92510100a1598e"},{"name":"Billy Bob","age":"27","id":"5959ebf84d92510100a1598f"},{"name":"Billy Bob","age":"27","id":"5959ec054d92510100a15990"},{"name":"Billy Bob","age":"27","id":"5959ed6d4d92510100a15991"},{"name":"Billy Bob","age":"27","id":"5959ed714d92510100a15992"},{"name":"Billy Bob","age":"27","id":"5959edf54d92510100a15993"},{"name":"Aaron","age":"27","id":"5959edfa4d92510100a15994"},{"name":"allan","age":"32","id":"5959eea74d92510100a15995"},{"name":"arkin angelo","age":"11","id":"5959f0124d92510100a15996"},{"name":"Aaron Allan","age":"31","id":"5959f0674d92510100a15997"},{"name":"Aaron Allan","age":"31","id":"5959f0934d92510100a15998"},{"name":"Aaron Allan","age":"31","id":"5959f0ad4d92510100a15999"},{"name":"Aaron Allan","age":"31","id":"5959f0ba4d92510100a1599a"},{"name":"Aaron Allan","age":"31","id":"5959f0d44d92510100a1599b"},{"name":"test","age":"testing","id":"5959f0e44d92510100a1599c"},{"name":"testing1","age":"testing1","id":"5959f0f94d92510100a1599d"},{"name":"Aaron Allan","age":"31","id":"5959f1374d92510100a1599e"},{"name":"Aaron Allan","age":"31","id":"5959f1534d92510100a1599f"},{"name":"Allan Allan","age":"32","id":"5959fa654d92510100a159a3"},{"name":"Hurray","age":"yes","id":"5959fb554d92510100a159a5"},{"name":"Hurray1","age":"yes","id":"5959fb604d92510100a159a6"},{"name":"Allan","age":"32","id":"5959fe564d92510100a159a8"},{"format":"json","id":"595a01c94d92510100a159a9"},{"name":"Angel","age":"29","id":"595a02524d92510100a159aa"},{"name":"Angel","age":"29","id":"595a030b4d92510100a159ab"},{"name":"Allan Suaco","age":"32","id":"595a03f64d92510100a159ac"},{"name":"Neal","age":"31","id":"595a04474d92510100a159ad"},{"name":"Allan","age":"32","id":"595a04504d92510100a159ae"},{"name":"Toffee","age":"32","id":"595a2305da94cc01009d2aae"},{"name":"user1","age":"11","id":"595a24d8da94cc01009d2aaf"},{"name":"aaaa","age":"1","id":"595a2630da94cc01009d2ab0"},{"name":"vvvv","age":"2","id":"595a2634da94cc01009d2ab1"},{"name":"ssss","age":"34","id":"595a263dda94cc01009d2ab2"},{"name":"aaaa","age":"22","id":"595a26f5da94cc01009d2ab3"},{"name":"vvvv","age":"33","id":"595a26fbda94cc01009d2ab4"},{"name":"aaaa","age":"11","id":"595a271bda94cc01009d2ab5"},{"name":"aaaa","age":"11","id":"595a3cc7da94cc01009d2ac4"},{"name":"aaaa","age":"32","id":"595a3fe4da94cc01009d2ac5"},{"name":"aaa","age":"33","id":"595a4017da94cc01009d2ac6"},{"name":"John","drink":"Cofee","id":"595a40b4da94cc01009d2ac7"},{"name":"aaa","age":"32","id":"595a40e3da94cc01009d2ac8"},{"name":"Allan","age":"32","id":"595a4102da94cc01009d2ac9"},{"name":"Angel","age":"29","id":"595a4109da94cc01009d2aca"},{"name":"Allan","age":"32","id":"595a418ada94cc01009d2acb"},{"name":"Angel","age":"29","id":"595a4192da94cc01009d2acc"},{"name":"Milos","drink":"Pepsi","id":"595a428ada94cc01009d2acd"},{"name":"Anja","drink":"Lemonade","id":"595a58c3f50e0e0100361f01"},{"name":"xxxx","age":"11","id":"595c6313a41f930100893b16"},{"name":"xxxx","age":"11","id":"595c64f3a41f930100893b17"},{"name":"xxx","age":"11","id":"595c6555a41f930100893b18"},{"name":"aaaa","age":"32","id":"595c69f0a41f930100893b19"},{"name":"xxxx","age":"12","id":"595c6b70a41f930100893b1a"},{"name":"xxxx","age":"11","id":"595c6c3aa41f930100893b1b"},{"name":"aaaa","age":"23","id":"595c6c55a41f930100893b1c"},{"name":"xxxx","age":"11","id":"595c6ca9a41f930100893b1d"},{"name":"Allan Suaco","age":"32","id":"595c7196a41f930100893b1e"},{"name":"Allan Suaco","age":"32","id":"595c71f0a41f930100893b1f"},{"name":"Allan Suaco","age":"32","id":"595c7228a41f930100893b20"},{"name":"Allan Suaco","age":"32","id":"595c7270a41f930100893b21"},{"name":"xxxxx","age":"11","id":"595c738ca41f930100893b22"},{"name":"xxxx","age":"11","id":"595c7399a41f930100893b23"},{"name":"aaaa","age":"21","id":"595c73aaa41f930100893b24"},{"name":"xxxx","age":"11","id":"595c7413a41f930100893b25"},{"name":"user1","age":"23","id":"595c7572a41f930100893b27"},{"name":"user2","age":"32","id":"595c7578a41f930100893b28"},{"name":"Allan Suaco","age":"32","id":"595c78055bf2280100a33ed2"},{"name":"User1","age":"32","id":"595c780c5bf2280100a33ed3"},{"name":"Allan Suaco","age":"32","id":"595c78e75bf2280100a33ed4"},{"name":"user1","age":"32","id":"595c78ec5bf2280100a33ed5"},{"name":"user1","age":"11","id":"595c795e5bf2280100a33ed6"},{"name":"user2","age":"11","id":"595c79615bf2280100a33ed7"},{"name":"adfasfas","age":"11","id":"595c79d05bf2280100a33ed8"},{"name":"dfdfdf","age":"22","id":"595c79d55bf2280100a33ed9"},{"name":"sadfadfas","age":"11","id":"595c7a1a5bf2280100a33eda"},{"name":"ddd","age":"2","id":"595c7a1e5bf2280100a33edb"},{"name":"sdfsaf","age":"11","id":"595c7a9b5bf2280100a33edc"},{"name":"dddd","age":"11","id":"595c7aa05bf2280100a33edd"},{"name":"aaaa","age":"11","id":"595c7aec5bf2280100a33ede"},{"name":"aaaa","age":"11","id":"595c7aed5bf2280100a33edf"},{"name":"aaaaa","age":"11","id":"595c7b6a5bf2280100a33ee0"},{"name":"aaaaa","age":"11","id":"595c7b6b5bf2280100a33ee1"},{"name":"aaaa","age":"11","id":"595c7d465bf2280100a33ee3"},{"name":"aaaa","age":"11","id":"595c7d485bf2280100a33ee4"},{"name":"aaaa","age":"11","id":"595c7d4a5bf2280100a33ee5"},{"name":"user1","age":"11","id":"595c80ff5bf2280100a33ee6"},{"name":"user2","age":"11","id":"595c81025bf2280100a33ee7"},{"name":"user1","age":"12","id":"595c81405bf2280100a33ee8"},{"name":"user2","age":"12","id":"595c81445bf2280100a33ee9"},{"name":"user1","age":"12","id":"595c81525bf2280100a33eea"},{"name":"user2","age":"12","id":"595c81565bf2280100a33eeb"},{"name":"user1","age":"12","id":"595c81e55bf2280100a33eec"},{"name":"user2","age":"12","id":"595c81e95bf2280100a33eed"},{"name":"allan suaco","age":"32","id":"595c8b5a5bf2280100a33ef1"},{"name":"arkin","age":"7","id":"595c8b625bf2280100a33ef2"},{"name":"angelica","age":"29","id":"595c8d385bf2280100a33ef3"},{"name":"allan","age":"32","id":"595c8d405bf2280100a33ef4"},{"name":"dafafdad","age":"1","id":"595c8d765bf2280100a33ef5"},{"name":"dafafdad","age":"2","id":"595c8d795bf2280100a33ef6"},{"name":"dafasfas","age":"123","id":"595c8f155bf2280100a33ef7"},{"name":"dafasfas","age":"232","id":"595c8f195bf2280100a33ef8"},{"name":"adfsafs","age":"1","id":"595c910b5bf2280100a33efa"},{"name":"adfsafs","age":"2","id":"595c910e5bf2280100a33efb"},{"name":"dafasf","age":"1","id":"595c924c5bf2280100a33efc"},{"name":"dafasf","age":"1","id":"595c924c5bf2280100a33efd"},{"name":"dafafsa","age":"11","id":"595c925a5bf2280100a33efe"},{"name":"dafafsa","age":"12","id":"595c925d5bf2280100a33eff"},{"name":"Billy Bob","age":"27","id":"595cac5c5bf2280100a33f0d"},{"name":"Billy Bob","age":"27","id":"595cace65bf2280100a33f0e"},{"name":"Billy Bob","age":"27","id":"595cb0435bf2280100a33f14"},{"name":"Shauwn Bob","age":"17","id":"595cb0805bf2280100a33f15"},{"name":"Dewie Bob","age":"17","id":"595cb0cb5bf2280100a33f16"},{"name":"sdfsdfs","age":"11","id":"595ce39249fd9a0100268a82"},{"name":"allan suaco","age":"32","id":"595ce64949fd9a0100268a8b"},{"name":"allan suaco 1","age":"21","id":"595ce6c449fd9a0100268a8c"},{"name":"allan2","age":"32","id":"595ce7bf49fd9a0100268a94"},{"name":"user 1","age":"32","id":"595ce88849fd9a0100268a96"},{"name":"asdfasdfsa","age":"1","id":"595ce9f549fd9a0100268a97"},{"name":"aaaaa","age":"1","id":"595cea1449fd9a0100268a98"},{"name":"adfsafsa","age":"32","id":"595ced9b49fd9a0100268a9a"},{"name":"dafafa","age":"100","id":"595cf1ca49fd9a0100268aa0"},{"name":"dddddd","age":"111","id":"595cf25d49fd9a0100268aa1"},{"name":"aaa","age":"11","id":"595cf2ba49fd9a0100268aa2"},{"name":"dafasfsa","age":"123","id":"595cf3dd49fd9a0100268aa3"},{"name":"adfadfa","age":"12","id":"595cf70f49fd9a0100268aa4"}]
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(
+    data.filter(item => typeof item === 'object')
+  )
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2818:6 (228) [Array(3), Array(1), Array(1), Array(1), Array(1), Array(1), Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object…]
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(
+    data.filter(item => typeof item === 'object' && Array.isArray(item) === false)
+  )
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2901:6 (222) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object…][0 … 99]0: Objectage: "21"id: "59412fba9d40d80100da4ca0"name: "johny"__proto__: Object1: Object2: Object3: Object4: Object5: Object6: Object7: Object8: Object9: Object10: Object11: Object12: Object13: Object14: Object15: Object16: Object17: Object18: Object19: Object20: Object21: Object22: Object23: Object24: Object25: Object26: Object27: Object28: Object29: Object30: Object31: Object32: Object33: Object34: Object35: Object36: Object37: Object38: Object39: Object40: Object41: Object42: Object43: Object44: Object45: Object46: Object47: Object48: Object49: Object50: Object51: Object52: Object53: Object54: Object55: Object56: Object57: Object58: Object59: Object60: Object61: Object62: Object63: Object64: Object65: Object66: Object67: Object68: Object69: Object70: Object71: Object72: Object73: Object74: Object75: Object76: Object77: Object78: Object79: Object80: Object81: Object82: Object83: Object84: Object85: Object86: Object87: Object88: Object89: Object90: Object91: Object92: Object93: Object94: Object95: Object96: Object97: Object98: Object99: Object[100 … 199][200 … 221]length: 222__proto__: Array(0)
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(
+    data.filter(
+      item => typeof item === 'object' && Array.isArray(item) === false
+    ).filter(
+      item => item.age !== 'undefined'
+    )
+  )
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2949:6 (222) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object…][0 … 99]0: Objectage: "21"id: "59412fba9d40d80100da4ca0"name: "johny"__proto__: Object1: Objectage: "thefloor"id: "594130889d40d80100da4ca5"name: "Lava"__proto__: Object2: Object3: Object4: Object5: Object6: Object7: Object8: Object9: Object10: Object11: Object12: Object13: Object14: Object15: Object16: Object17: Object18: Object19: Object20: Object21: Object22: Object23: Object24: Object25: Object26: Object27: Object28: Object29: Object30: Object31: Object32: Object33: Object34: Object35: Object36: Object37: Object38: Object39: Object40: Object41: Object42: Object43: Object44: Object45: Object46: Object47: Object48: Object49: Object50: Object51: Object52: Object53: Object54: Object55: Object56: Object57: Object58: Object59: Object60: Object61: Object62: Object63: Object64: Object65: Object66: Object67: Object68: Object69: Object70: Object71: Object72: Object73: Object74: Object75: Object76: Object77: Object78: Object79: Object80: Object81: Object82: Object83: Object84: Object85: Object86: Object87: Object88: Object89: Object90: Object91: Object92: Object93: Object94: Object95: Object96: Object97: Object98: Object99: Object[100 … 199][200 … 221]length: 222__proto__: Array(0)
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(
+    data.filter(
+      item => typeof item === 'object' && Array.isArray(item) === false
+    ).filter(
+      item => typeof item.age === 'number'
+    )
+  )
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM2990:6 (2) [Object, Object]0: Objectage: 21id: "59590286ee43f901002139a0"name: "Sravani"__proto__: Object1: Objectage: 23id: "59593b631e92710100b1957c"name: "abhi"__proto__: Objectlength: 2__proto__: Array(0)
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(
+    data.filter(
+      item => typeof item === 'object' && Array.isArray(item) === false
+    ).filter(
+      item => !isNaN(item.age)
+    )
+  )
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM3012:6 (196) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object…]
+fetch(
+  'http://rest.learncode.academy/api/johnbob/friends'
+).then(
+  response => response.json()
+).then(
+  data => console.log(
+    data.filter(
+      item => typeof item === 'object' && Array.isArray(item) === false
+    ).filter(
+      item => !isNaN(item.age)
+    ).map(
+      item => Object.assign({}, item, { age: parseInt(item.age, 10) })
+    )
+  )
+).catch(
+  error => console.log(error.message)
+)
+Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
+VM3097:6 (196) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object…]

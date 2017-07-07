@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Button from './Button'
+import { Button } from 'react-bootstrap'
 
 import './Counter.css'
 
@@ -31,8 +30,6 @@ export default class Counter extends React.Component {
   }
 
   render() {
-    console.log(this.props)
-
     return (
       <div className="Counter">
         <h1>Counter</h1>
@@ -40,6 +37,7 @@ export default class Counter extends React.Component {
         <h2>{this.state.value}</h2>
         <div className="Counter__buttons">
           <Button
+            bsStyle="danger"
             onClick={this.props.handleZupa}
           >
             Awesome Increase
