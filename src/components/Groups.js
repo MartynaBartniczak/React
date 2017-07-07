@@ -34,7 +34,6 @@ export default class Groups extends React.Component {
   }
 
   render() {
-    console.log(JSON.stringify(this.state))
     return (
       <div>
         <h1>Groups</h1>
