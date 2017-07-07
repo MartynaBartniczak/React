@@ -4,9 +4,7 @@ import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 import {
   Navbar,
   Nav,
-  MenuItem,
-  NavItem,
-  NavDropdown
+  NavItem
 } from 'react-bootstrap'
 
 const MainMenu = (props) => (

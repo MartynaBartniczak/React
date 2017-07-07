@@ -1,15 +1,15 @@
 import React from 'react'
 
-export default class Employees extends React.Component {
+export default class Groups extends React.Component {
 
   componentWillMount() {
     fetch(
-      'http://localhost:3000/data/employees.json'
+      'http://localhost:3000/data/groups.json'
     ).then(
       response => response.json()
     ).then(
       data => this.setState({
-        employees: data
+        groups: data
       })
     ).catch(
       error => console.log(error.message)
@@ -19,12 +19,12 @@ export default class Employees extends React.Component {
   render() {
     return (
       <div>
-        <h1>Employees</h1>
+        <h1>Groups</h1>
         <ul>
           { this.state === null ? <p>Fetching data ....</p> : null}
           {
-            this.state !== null && this.state.employees.map(
-              employee => <li key={employee.id}>{employee.name}</li>
+            this.state !== null && this.state.groups.map(
+              group => <li key={group.id}>{group.name}</li>
             )
           }
         </ul>
