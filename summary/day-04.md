@@ -6,6 +6,3 @@
 - bind!!!!!
 - browser features:
  - fetch
-- npm packages:
-  - react-router-dom
-  - react-router-bootstrap
