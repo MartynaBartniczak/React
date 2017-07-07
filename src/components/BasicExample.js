@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
+import MainMenu from './MainMenu'
 import SignUpForm from './SignUpForm'
 import Counters from './Counters'
 import Employees from './Employees'
@@ -12,6 +13,7 @@ import Employees from './Employees'
 const BasicExample = () => (
   <Router>
     <div>
+      <MainMenu/>
       <ul>
         <li><Link to="/">Sign Up</Link></li>
         <li><Link to="/counters">Counters</Link></li>

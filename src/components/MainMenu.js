@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 import {
   Navbar,
   Nav,
@@ -11,19 +13,19 @@ const MainMenu = (props) => (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="/">
-          Zupa
-        </a>
+        <Link to="/">Zupa</Link>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
-      <NavItem eventKey={1} href="/">Link</NavItem>
+      <LinkContainer to="/counters">
+        <NavItem>Counters</NavItem>
+      </LinkContainer>
       <NavItem eventKey={2} href="/">Link</NavItem>
       <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
         <MenuItem eventKey={3.1}>Action</MenuItem>
         <MenuItem eventKey={3.2}>Another action</MenuItem>
         <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider />
+        <MenuItem divider/>
         <MenuItem eventKey={3.4}>The life of Zupa</MenuItem>
       </NavDropdown>
     </Nav>
