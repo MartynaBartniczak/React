@@ -4,9 +4,7 @@ import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 import {
   Navbar,
   Nav,
-  MenuItem,
-  NavItem,
-  NavDropdown
+  NavItem
 } from 'react-bootstrap'
 
 const MainMenu = (props) => (
@@ -26,13 +24,12 @@ const MainMenu = (props) => (
       <LinkContainer to="/employees">
         <NavItem>Employees</NavItem>
       </LinkContainer>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-        <MenuItem divider/>
-        <MenuItem eventKey={3.4}>The life of Zupa</MenuItem>
-      </NavDropdown>
+      <LinkContainer to="/students">
+        <NavItem>Students</NavItem>
+      </LinkContainer>
+      <LinkContainer to="/groups">
+        <NavItem>Groups</NavItem>
+      </LinkContainer>
     </Nav>
   </Navbar>
 )

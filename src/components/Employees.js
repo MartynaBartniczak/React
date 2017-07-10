@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Employees extends React.Component {
 
@@ -9,9 +10,7 @@ export default class Employees extends React.Component {
       response => response.json()
     ).then(
       data => this.setState({
-        employees: data.map(
-          employee => employee.name
-        )
+        employees: data
       })
     ).catch(
       error => console.log(error.message)
@@ -26,7 +25,13 @@ export default class Employees extends React.Component {
           { this.state === null ? <p>Fetching data ....</p> : null}
           {
             this.state !== null && this.state.employees.map(
-              employee => <li>{employee}</li>
+              employee => (
+                <li key={employee.id}>
+                  <Link to={'/employees/' + employee.id}>
+                    {employee.name}
+                  </Link>
+                </li>
+              )
             )
           }
         </ul>

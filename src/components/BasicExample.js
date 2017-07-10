@@ -1,14 +1,16 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 import MainMenu from './MainMenu'
 import SignUpForm from './SignUpForm'
 import Counters from './Counters'
 import Employees from './Employees'
+import Employee from './Employee'
+import Students from './Students'
+import Groups from './Groups'
 
 const BasicExample = () => (
   <Router>
@@ -19,7 +21,10 @@ const BasicExample = () => (
 
       <Route exact path="/" component={SignUpForm}/>
       <Route path="/counters" component={Counters}/>
-      <Route path="/employees" component={Employees}/>
+      <Route exact path="/employees" component={Employees}/>
+      <Route path="/employees/:employeeId" component={Employee}/>
+      <Route path="/students" component={Students}/>
+      <Route path="/groups" component={Groups}/>
     </div>
   </Router>
 )
