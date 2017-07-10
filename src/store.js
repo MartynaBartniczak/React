@@ -1,23 +1,7 @@
 import { createStore } from 'redux'
 
-const reducer = (state, action) => {
-  console.log(state, action)
-  if (action.type === 'HELLO') {
-    return {
-      x: 15
-    }
-  }
-  return state
-}
+import counter from './state/counter'
 
-const store = createStore(reducer, { x: 10 })
-
-store.subscribe(() => console.log(store.getState()))
-
-store.dispatch({
-  type: 'HELLO'
-})
-
-
+const store = createStore(counter)
 
 export default store

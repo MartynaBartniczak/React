@@ -13,6 +13,7 @@ import Students from './Students'
 import Student from './Student'
 import Groups from './Groups'
 import Group from './Group'
+import SmartCounter from './SmartCounter'
 
 const App = () => (
   <Router>
@@ -22,6 +23,7 @@ const App = () => (
       <hr/>
 
       <Route exact path="/" component={SignUpForm}/>
+      <Route exact path="/smart-counter" component={SmartCounter}/>
       <Route path="/counters" component={Counters}/>
       <Route exact path="/employees" component={Employees}/>
       <Route path="/employees/:employeeId" component={Employee}/>
