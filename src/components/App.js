@@ -14,7 +14,7 @@ import Student from './Student'
 import Groups from './Groups'
 import Group from './Group'
 
-const BasicExample = () => (
+const App = () => (
   <Router>
     <div>
       <MainMenu/>
@@ -32,4 +32,4 @@ const BasicExample = () => (
     </div>
   </Router>
 )
-export default BasicExample
+export default App
