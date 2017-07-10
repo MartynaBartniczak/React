@@ -1,6 +1,5 @@
 import React from 'react'
-
-
+import { Table } from 'react-bootstrap'
 
 export default class Employee extends React.Component {
 
@@ -29,6 +28,22 @@ export default class Employee extends React.Component {
     return (
       <div>
         <h1>Employee card {employeeId}: {employee === undefined ? null : employee.name}</h1>
+        <Table striped bordered condensed hover responsive>
+          <tbody>
+          {
+            employee === undefined ?
+              null :
+              employee.deals.map(
+                deal => (
+                  <tr>
+                    <td>{deal.date}</td>
+                    <td>{deal.value}</td>
+                  </tr>
+                )
+              )
+          }
+          </tbody>
+        </Table>
       </div>
     )
   }
