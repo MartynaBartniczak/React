@@ -14,6 +14,7 @@ import Student from './Student'
 import Groups from './Groups'
 import Group from './Group'
 import SmartCounter from './SmartCounter'
+import Carousel from './Carousel'
 
 const App = () => (
   <Router>
@@ -31,6 +32,7 @@ const App = () => (
       <Route path="/students/:studentId" component={Student}/>
       <Route exact path="/groups" component={Groups}/>
       <Route path="/groups/:groupId" component={Group}/>
+      <Route path="/carousel" component={Carousel}/>
     </div>
   </Router>
 )
