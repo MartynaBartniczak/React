@@ -1,6 +1,8 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
 
+const usdToNumber = usd => parseFloat(usd.slice(1))
+
 export default class Employee extends React.Component {
 
   state = {
@@ -25,22 +27,34 @@ export default class Employee extends React.Component {
       employee => employee.id === employeeId
     )
 
+    if (employee === undefined) {
+      return (
+        <div>
+          <h1>Not found yet...</h1>
+        </div>
+      )
+    }
+
+    const total = employee.deals.reduce(
+      (total, next) => total + usdToNumber(next.value),
+      0
+    ).toFixed(2)
+
     return (
       <div>
-        <h1>Employee card {employeeId}: {employee === undefined ? null : employee.name}</h1>
+        <h1>Employee card {employeeId}: {employee.name}</h1>
+        <h2>Total: ${total}</h2>
         <Table striped bordered condensed hover responsive>
           <tbody>
           {
-            employee === undefined ?
-              null :
-              employee.deals.map(
-                deal => (
-                  <tr>
-                    <td>{deal.date}</td>
-                    <td>{deal.value}</td>
-                  </tr>
-                )
+            employee.deals.map(
+              deal => (
+                <tr>
+                  <td>{deal.date}</td>
+                  <td>{deal.value}</td>
+                </tr>
               )
+            )
           }
           </tbody>
         </Table>
