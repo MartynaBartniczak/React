@@ -48,8 +48,8 @@ export default class Employee extends React.Component {
           <tbody>
           {
             employee.deals.map(
-              deal => (
-                <tr>
+              (deal, index) => (
+                <tr key={index}>
                   <td>{deal.date}</td>
                   <td>{deal.value}</td>
                 </tr>
