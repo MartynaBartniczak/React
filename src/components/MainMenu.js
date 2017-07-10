@@ -18,6 +18,9 @@ const MainMenu = (props) => (
       <IndexLinkContainer to="/">
         <NavItem>Home</NavItem>
       </IndexLinkContainer>
+      <LinkContainer to="/smart-counter">
+        <NavItem>Smart Counter</NavItem>
+      </LinkContainer>
       <LinkContainer to="/counters">
         <NavItem>Counters</NavItem>
       </LinkContainer>

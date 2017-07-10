@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Groups extends React.Component {
 
@@ -42,7 +43,9 @@ export default class Groups extends React.Component {
             this.state.groups.map(
               group => (
                 <li key={group.id}>
-                  {group.name}
+                  <Link to={'/groups/' + group.id}>
+                    {group.name}
+                  </Link>
                   <ul>
                     {
                       group.studentIds.map(
@@ -52,7 +55,13 @@ export default class Groups extends React.Component {
                       ).filter(
                         student => student !== undefined
                       ).map(
-                        student => <li key={student.id}>{student.name}</li>
+                        student => (
+                          <li key={student.id}>
+                            <Link to={'/students/' + student.id}>
+                              {student.name}
+                            </Link>
+                          </li>
+                        )
                       )
                     }
                   </ul>

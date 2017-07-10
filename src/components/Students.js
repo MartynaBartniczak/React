@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Students extends React.Component {
 
@@ -24,7 +25,13 @@ export default class Students extends React.Component {
           { this.state === null ? <p>Fetching data ....</p> : null}
           {
             this.state !== null && this.state.students.map(
-              student => <li key={student.id}>{student.name}</li>
+              student => (
+                <li key={student.id}>
+                  <Link to={'/students/' + student.id}>
+                    {student.name}
+                  </Link>
+                </li>
+              )
             )
           }
         </ul>
