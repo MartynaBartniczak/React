@@ -32,7 +32,6 @@ export default connect(
         )
       }
 
-
       return (
         <div>
           <h1>Group card {groupId}: {group.name}</h1>

@@ -22,7 +22,7 @@ const fetchFail = error => ({
 export const fetchStudents = () => dispatch => {
   dispatch(fetchBegin())
   return fetch(
-    'http://localhost:3000/data/students.json'
+    process.env.PUBLIC_URL + '/data/students.json'
   ).then(
     response => response.json()
   ).then(
