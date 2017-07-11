@@ -4,19 +4,32 @@ const FETCH__SUCCESS = 'students/FETCH__SUCCESS'
 const FETCH__FAIL = 'students/FETCH__FAIL'
 
 // action creators
-export const fetchBegin = () => ({
+const fetchBegin = () => ({
   type: FETCH__BEGIN
 })
 
-export const fetchSuccess = data => ({
+const fetchSuccess = data => ({
   type: FETCH__SUCCESS,
   data
 })
 
-export const fetchFail = error => ({
+const fetchFail = error => ({
   type: FETCH__FAIL,
   error
 })
+
+export const fetchStudents = () => dispatch => {
+  dispatch(fetchBegin())
+  return fetch(
+    'http://localhost:3000/data/students.json'
+  ).then(
+    response => response.json()
+  ).then(
+    data => dispatch(fetchSuccess(data))
+  ).catch(
+    error => dispatch(fetchFail(error))
+  )
+}
 
 // initial state
 const initialState = {

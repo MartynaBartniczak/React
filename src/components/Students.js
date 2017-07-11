@@ -2,31 +2,20 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { fetchBegin, fetchSuccess, fetchFail } from '../state/students'
+import { fetchStudents } from '../state/students'
 
 export default connect(
   state => ({
     students: state.students
   }),
   dispatch => ({
-    fetchBegin: () => dispatch(fetchBegin()),
-    fetchSuccess: data => dispatch(fetchSuccess(data)),
-    fetchFail: error => dispatch(fetchFail(error))
+    fetchStudents: () => dispatch(fetchStudents())
   })
 )(
   class Students extends React.Component {
 
     componentWillMount() {
-      this.props.fetchBegin()
-      fetch(
-        'http://localhost:3000/data/students.json'
-      ).then(
-        response => response.json()
-      ).then(
-        data => this.props.fetchSuccess(data)
-      ).catch(
-        error => this.props.fetchFail(error)
-      )
+      this.props.fetchStudents()
     }
 
     render() {
