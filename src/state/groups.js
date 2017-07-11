@@ -1,7 +1,7 @@
 // action types
-const FETCH__BEGIN = 'students/FETCH__BEGIN'
-const FETCH__SUCCESS = 'students/FETCH__SUCCESS'
-const FETCH__FAIL = 'students/FETCH__FAIL'
+const FETCH__BEGIN = 'groups/FETCH__BEGIN'
+const FETCH__SUCCESS = 'groups/FETCH__SUCCESS'
+const FETCH__FAIL = 'groups/FETCH__FAIL'
 
 // action creators
 const fetchBegin = () => ({
@@ -19,10 +19,10 @@ const fetchFail = error => ({
 })
 
 // Fetching data from server (using redux-thunk)
-export const fetchStudents = () => dispatch => {
+export const fetchGroups = () => dispatch => {
   dispatch(fetchBegin())
   return fetch(
-    'http://localhost:3000/data/students.json'
+    'http://localhost:3000/data/groups.json'
   ).then(
     response => response.json()
   ).then(
