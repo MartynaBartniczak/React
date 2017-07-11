@@ -20,7 +20,9 @@ export default (state = initialState, action = {}) => {
     case ADD:
       return {
         ...state,
-        favoriteStudentIds: state.favoriteStudentIds.concat(action.studentId)
+        favoriteStudentIds: state.favoriteStudentIds.filter(
+          studentId => action.studentId !== studentId
+        ).concat(action.studentId)
       }
     case REMOVE:
       return {
