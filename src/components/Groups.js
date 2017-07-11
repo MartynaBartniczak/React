@@ -2,9 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+import { fetchStudents } from '../state/students'
+
 export default connect(
   state => ({}),
-  dispatch => ({})
+  dispatch => ({
+    fetchStudents: () => dispatch(fetchStudents())
+  })
 )(
   class Groups extends React.Component {
 
@@ -26,17 +30,7 @@ export default connect(
         error => console.log(error.message)
       )
 
-      fetch(
-        'http://localhost:3000/data/students.json'
-      ).then(
-        response => response.json()
-      ).then(
-        data => this.setState({
-          students: data
-        })
-      ).catch(
-        error => console.log(error.message)
-      )
+      this.props.fetchStudents()
     }
 
     render() {
