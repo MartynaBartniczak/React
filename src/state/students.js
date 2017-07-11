@@ -18,6 +18,7 @@ const fetchFail = error => ({
   error
 })
 
+// Fetching data from server (using redux-thunk)
 export const fetchStudents = () => dispatch => {
   dispatch(fetchBegin())
   return fetch(
