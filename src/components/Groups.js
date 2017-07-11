@@ -3,11 +3,13 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { fetchStudents } from '../state/students'
+import { fetchGroups } from '../state/groups'
 
 export default connect(
   state => ({}),
   dispatch => ({
-    fetchStudents: () => dispatch(fetchStudents())
+    fetchStudents: () => dispatch(fetchStudents()),
+    fetchGroups: () => dispatch(fetchGroups())
   })
 )(
   class Groups extends React.Component {
@@ -18,18 +20,7 @@ export default connect(
     }
 
     componentWillMount() {
-      fetch(
-        'http://localhost:3000/data/groups.json'
-      ).then(
-        response => response.json()
-      ).then(
-        data => this.setState({
-          groups: data
-        })
-      ).catch(
-        error => console.log(error.message)
-      )
-
+      this.props.fetchGroups()
       this.props.fetchStudents()
     }
 
