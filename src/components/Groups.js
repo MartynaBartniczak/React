@@ -6,7 +6,10 @@ import { fetchStudents } from '../state/students'
 import { fetchGroups } from '../state/groups'
 
 export default connect(
-  state => ({}),
+  state => ({
+    students: state.students,
+    groups: state.groups
+  }),
   dispatch => ({
     fetchStudents: () => dispatch(fetchStudents()),
     fetchGroups: () => dispatch(fetchGroups())
@@ -14,23 +17,20 @@ export default connect(
 )(
   class Groups extends React.Component {
 
-    state = {
-      groups: [],
-      students: []
-    }
-
     componentWillMount() {
       this.props.fetchGroups()
       this.props.fetchStudents()
     }
 
     render() {
+      const { students, groups } = this.props
+
       return (
         <div>
           <h1>Groups</h1>
           <ul>
             {
-              this.state.groups.map(
+              groups.data === null ? null : groups.data.map(
                 group => (
                   <li key={group.id}>
                     <Link to={'/groups/' + group.id}>
@@ -39,7 +39,7 @@ export default connect(
                     <ul>
                       {
                         group.studentIds.map(
-                          studentId => this.state.students.find(
+                          studentId => students.data === null ? undefined : students.data.find(
                             student => student.id === studentId
                           )
                         ).filter(
