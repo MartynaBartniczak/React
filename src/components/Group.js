@@ -1,42 +1,43 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-export default class Group extends React.Component {
+import { fetchGroups } from '../state/groups'
 
-  state = {
-    groups: []
-  }
+export default connect(
+  state => ({
+    groups: state.groups
+  }),
+  dispatch => ({
+    fetchGroups: () => dispatch(fetchGroups())
+  })
+)(
+  class Group extends React.Component {
 
-  componentWillMount() {
-    fetch(
-      process.env.PUBLIC_URL + '/data/groups.json'
-    ).then(
-      response => response.json()
-    ).then(
-      groups => this.setState({
-        groups
-      })
-    )
-  }
+    componentWillMount() {
+      this.props.fetchGroups()
+    }
 
-  render() {
-    const groupId = parseInt(this.props.match.params.groupId, 10)
-    const group = this.state.groups.find(
-      group => group.id === groupId
-    )
+    render() {
+      const { data, fetching, error } = this.props.groups
+      const groupId = parseInt(this.props.match.params.groupId, 10)
+      const group = data === null ? undefined : data.find(
+        group => group.id === groupId
+      )
 
-    if (group === undefined) {
+      if (group === undefined) {
+        return (
+          <div>
+            <h1>Not found yet...</h1>
+          </div>
+        )
+      }
+
+
       return (
         <div>
-          <h1>Not found yet...</h1>
+          <h1>Group card {groupId}: {group.name}</h1>
         </div>
       )
     }
-
-
-    return (
-      <div>
-        <h1>Group card {groupId}: {group.name}</h1>
-      </div>
-    )
   }
-}
+)
