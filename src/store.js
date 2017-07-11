@@ -3,11 +3,13 @@ import thunk from 'redux-thunk'
 
 import counter from './state/counter'
 import students from './state/students'
+import favoriteStudents from './state/favoriteStudents'
 import groups from './state/groups'
 
 const reducer = combineReducers({
   counter,
   students,
+  favoriteStudents,
   groups
 })
 
