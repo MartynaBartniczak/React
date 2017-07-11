@@ -38,6 +38,7 @@ export default connect(
             { error === null ? null : <p>{error.message}</p> }
             { fetching === false ? null : <p>Fetching data...</p>}
             {
+              //this.props.students.data !== null && this.props.students.data.map(
               data !== null && data.map(
                 student => (
                   <li key={student.id}>
