@@ -3,10 +3,12 @@ import thunk from 'redux-thunk'
 
 import counter from './state/counter'
 import students from './state/students'
+import groups from './state/groups'
 
 const reducer = combineReducers({
   counter,
-  students
+  students,
+  groups
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
