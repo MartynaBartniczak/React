@@ -1,7 +1,9 @@
-// action types
-const FETCH__BEGIN = 'students/FETCH__BEGIN'
-const FETCH__SUCCESS = 'students/FETCH__SUCCESS'
-const FETCH__FAIL = 'students/FETCH__FAIL'
+/**
+ * Created by piotrkasprzycki on 11.07.17.
+ */
+const FETCH__BEGIN = 'employees/FETCH__BEGIN'
+const FETCH__SUCCESS = 'employees/FETCH__SUCCESS'
+const FETCH__FAIL = 'employees/FETCH__FAIL'
 
 // action creators
 const fetchBegin = () => ({
@@ -19,10 +21,10 @@ const fetchFail = error => ({
 })
 
 // Fetching data from server (using redux-thunk)
-export const fetchStudents = () => dispatch => {
+export const fetchEmployees = () => dispatch => {
   dispatch(fetchBegin())
   return fetch(
-    process.env.PUBLIC_URL + '/data/students.json'
+    process.env.PUBLIC_URL + '/data/employees.json'
   ).then(
     response => response.json()
   ).then(

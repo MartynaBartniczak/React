@@ -4,11 +4,13 @@ import thunk from 'redux-thunk'
 import counter from './state/counter'
 import students from './state/students'
 import groups from './state/groups'
+import employees from './state/employees'
 
 const reducer = combineReducers({
   counter,
   students,
-  groups
+  groups,
+  employees
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

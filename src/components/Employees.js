@@ -1,21 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default class Employees extends React.Component {
+import { fetchStudents } from '../state/students'
 
-  componentWillMount() {
-    fetch(
-      'http://localhost:3000/data/employees.json'
-    ).then(
-      response => response.json()
-    ).then(
-      data => this.setState({
-        employees: data
-      })
-    ).catch(
-      error => console.log(error.message)
-    )
-  }
+export default connect(
+  state => ({
+    students: state.students
+  }),
+  dispatch => ({
+    fetchEmployees: () => dispatch(fetchEmployees())
+  })
+)(
+  class Employees extends React.Component {
+
+    componentWillMount() {
+      this.props.fetchEmployees()
+    }
+
 
   render() {
     return (

@@ -1,26 +1,26 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-export default class Student extends React.Component {
+import { fetchStudents } from '../state/students'
 
-  state = {
-    students: []
-  }
+export default connect(
+  state => ({
+    students: state.students
+  }),
+  dispatch => ({
+    fetchStudents: () => dispatch(fetchStudents())
+  })
+)(
+  class Student extends React.Component {
 
-  componentWillMount() {
-    fetch(
-      process.env.PUBLIC_URL + '/data/students.json'
-    ).then(
-      response => response.json()
-    ).then(
-      students => this.setState({
-        students
-      })
-    )
-  }
+    componentWillMount() {
+      this.props.fetchStudents()
+    }
 
   render() {
+    const { data, fetching, error } = this.props.students
     const studentId = parseInt(this.props.match.params.studentId, 10)
-    const student = this.state.students.find(
+    const student = data === null ? undefined : data.find(
       student => student.id === studentId
     )
 
@@ -39,4 +39,4 @@ export default class Student extends React.Component {
       </div>
     )
   }
-}
+})
