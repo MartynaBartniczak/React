@@ -4,16 +4,16 @@ const FETCH__SUCCESS = 'students/FETCH__SUCCESS'
 const FETCH__FAIL = 'students/FETCH__FAIL'
 
 // action creators
-const fetchBegin = () => ({
+export const fetchBegin = () => ({
   type: FETCH__BEGIN
 })
 
-const fetchSuccess = data => ({
+export const fetchSuccess = data => ({
   type: FETCH__SUCCESS,
   data
 })
 
-const fetchFail = error => ({
+export const fetchFail = error => ({
   type: FETCH__FAIL,
   error
 })
