@@ -11,7 +11,8 @@ import { add, remove, toggle } from '../state/favoriteStudents'
 export default connect(
   state => ({
     students: state.students,
-    favoriteStudentIds: state.favoriteStudents.favoriteStudentIds
+    favoriteStudentIds: state.favoriteStudents.favoriteStudentIds,
+    searchPhrase: state.studentSearcher.searchPhrase
   }),
   dispatch => ({
     fetchStudents: () => dispatch(fetchStudents()),
@@ -49,7 +50,9 @@ export default connect(
             <tbody>
             {
               //this.props.students.data !== null && this.props.students.data.map(
-              data !== null && data.map(
+              data !== null && data.filter(
+                student => student.name.includes(this.props.searchPhrase)
+              ).map(
                 student => (
                   <tr key={student.id}>
                     <td>
