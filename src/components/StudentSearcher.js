@@ -4,10 +4,10 @@ import { FormControl } from 'react-bootstrap'
 
 import { updateSearchPhrase } from '../state/studentSearcher'
 
-const StudentSearcher = ({ searchPhrase, update }) => (
+const StudentSearcher = props => (
   <FormControl
-    value={searchPhrase}
-    onChange={update}
+    value={props.searchPhrase}
+    onChange={props.update}
     style={{marginBottom: 20}}
   />
 )
