@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Table } from 'react-bootstrap'
 
 import { fetchStudents } from '../state/students'
 import { add, remove, toggle } from '../state/favoriteStudents'
@@ -28,27 +29,59 @@ export default connect(
       return (
         <div>
           <h1>Students</h1>
-          <ul>
-            { error === null ? null : <p>{error.message}</p> }
-            { fetching === false ? null : <p>Fetching data...</p>}
+          { error === null ? null : <p>{error.message}</p> }
+          { fetching === false ? null : <p>Fetching data...</p>}
+          <Table bordered striped hover responsive>
+            <thead>
+              <tr>
+                <th>Is fav</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Is smoking</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody>
             {
               //this.props.students.data !== null && this.props.students.data.map(
               data !== null && data.map(
                 student => (
-                  <li key={student.id}>
-                    { this.props.favoriteStudentIds.includes(student.id) ? '*' : null}
-                    <Link to={'/students/' + student.id}>
-                      {student.name}
-                    </Link>
+                  <tr key={student.id}>
+                    <td>
+                      { this.props.favoriteStudentIds.includes(student.id) ? '*' : null}
+                    </td>
+                    <td>
+                      <Link to={'/students/' + student.id}>
+                        {student.name}
+                      </Link>
+                    </td>
+                    <td>
+                      {student.surname}
+                    </td>
 
-                    <button onClick={() => this.props.addToFav(student.id)}>Add to fav</button>
-                    <button onClick={() => this.props.removeFromFav(student.id)}>Remove from fav</button>
-                    <button onClick={() => this.props.toggleFav(student.id)}>Toggle</button>
-                  </li>
+                    <td>
+                      {student.smoking ? 'smoking' : 'fine'}
+                    </td>
+
+                    <td>
+                      <button onClick={() => this.props.addToFav(student.id)}>
+                        Add to fav
+                      </button>
+
+                      <button onClick={() => this.props.removeFromFav(student.id)}>
+                        Remove from fav
+                      </button>
+
+                      <button onClick={() => this.props.toggleFav(student.id)}>
+                        Toggle
+                      </button>
+                    </td>
+                  </tr>
                 )
               )
             }
-          </ul>
+            </tbody>
+          </Table>
         </div>
       )
     }

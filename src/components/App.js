@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import { Grid } from 'react-bootstrap'
 
 import MainMenu from './MainMenu'
 import SignUpForm from './SignUpForm'
@@ -17,7 +18,7 @@ import SmartCounter from './SmartCounter'
 
 const App = () => (
   <Router>
-    <div>
+    <Grid>
       <MainMenu/>
 
       <hr/>
@@ -31,7 +32,7 @@ const App = () => (
       <Route path="/students/:studentId" component={Student}/>
       <Route exact path="/groups" component={Groups}/>
       <Route path="/groups/:groupId" component={Group}/>
-    </div>
+    </Grid>
   </Router>
 )
 export default App
