@@ -18,7 +18,7 @@ export default connect(
     }
 
     render() {
-      const { data, fetching, error } = this.props.groups
+      const { data } = this.props.groups
       const groupId = parseInt(this.props.match.params.groupId, 10)
       const group = data === null ? undefined : data.find(
         group => group.id === groupId

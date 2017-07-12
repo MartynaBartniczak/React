@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Table } from 'react-bootstrap'
 
+import StudentSearcher from './StudentSearcher'
+
 import { fetchStudents } from '../state/students'
 import { add, remove, toggle } from '../state/favoriteStudents'
 
@@ -29,6 +31,9 @@ export default connect(
       return (
         <div>
           <h1>Students</h1>
+
+          <StudentSearcher/>
+
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
           <Table bordered striped hover responsive>
