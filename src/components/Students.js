@@ -51,7 +51,7 @@ export default connect(
             {
               //this.props.students.data !== null && this.props.students.data.map(
               data !== null && data.filter(
-                student => student.name.includes(this.props.searchPhrase)
+                student => student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) || student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
               ).map(
                 student => (
                   <tr key={student.id}>
