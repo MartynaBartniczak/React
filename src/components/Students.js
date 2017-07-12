@@ -40,7 +40,8 @@ export default connect(
                       {student.name}
                     </Link>
 
-                    <button onClick={() => this.props.addToFav(student.id)}>Fav</button>
+                    <button onClick={() => this.props.addToFav(student.id)}>Add to fav</button>
+                    <button onClick={() => this.props.removeFromFav(student.id)}>Remove from fav</button>
                   </li>
                 )
               )
