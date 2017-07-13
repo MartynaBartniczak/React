@@ -29,6 +29,13 @@ export default connect(
 
     render() {
       const { data, fetching, error } = this.props.students
+      const dataToDisplay = data === null ? [] : data.filter(
+          student => (
+            student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
+            student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
+          )
+        )
+
       return (
         <div>
           <h1>Students</h1>
@@ -50,9 +57,7 @@ export default connect(
             <tbody>
             {
               //this.props.students.data !== null && this.props.students.data.map(
-              data !== null && data.filter(
-                student => student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) || student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
-              ).map(
+              dataToDisplay.map(
                 student => (
                   <tr key={student.id}>
                     <td>
