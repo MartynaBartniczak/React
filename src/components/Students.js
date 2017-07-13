@@ -49,7 +49,12 @@ export default connect(
 
           <StudentSearcher/>
 
-          <Button onClick={this.props.activateFilter}>Smoking only</Button>
+          <Button
+            onClick={this.props.activateFilter}
+            bsStyle={smokingFilterActive ? 'primary' : 'default'}
+          >
+            Smoking only
+          </Button>
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
