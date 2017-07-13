@@ -19,7 +19,7 @@ export default connect(
     addToFav: id => dispatch(add(id)),
     removeFromFav: id => dispatch(remove(id)),
     toggleFav: id => dispatch(toggle(id)),
-    activateFilter: () => dispatch({ type: 'ZUPA' })
+    activateFilter: () => dispatch({ type: 'ACTIVATE_SMOKING_FILTER' })
   })
 )(
   class Students extends React.Component {
