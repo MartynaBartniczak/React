@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { Table } from 'react-bootstrap'
 
 import StudentSearcher from './StudentSearcher'
 import StudentTable from './StudentTable'
@@ -42,6 +40,10 @@ export default connect(
           <h1>Students</h1>
 
           <StudentSearcher/>
+
+          { error === null ? null : <p>{error.message}</p> }
+          { fetching === false ? null : <p>Fetching data...</p>}
+
           <StudentTable
             students={dataToDisplay}
             favoriteStudentIds={this.props.favoriteStudentIds}
@@ -49,9 +51,6 @@ export default connect(
             removeFromFav={this.props.removeFromFav}
             toggleFav={this.props.toggleFav}
           />
-
-          { error === null ? null : <p>{error.message}</p> }
-          { fetching === false ? null : <p>Fetching data...</p>}
         </div>
       )
     }
