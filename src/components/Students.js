@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'react-bootstrap'
 
 import StudentSearcher from './StudentSearcher'
 import StudentTable from './StudentTable'
@@ -40,6 +41,8 @@ export default connect(
           <h1>Students</h1>
 
           <StudentSearcher/>
+
+          <Button>Smoking only</Button>
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
