@@ -18,7 +18,8 @@ export default connect(
     fetchStudents: () => dispatch(fetchStudents()),
     addToFav: id => dispatch(add(id)),
     removeFromFav: id => dispatch(remove(id)),
-    toggleFav: id => dispatch(toggle(id))
+    toggleFav: id => dispatch(toggle(id)),
+    activateFilter: () => dispatch({ type: 'ZUPA' })
   })
 )(
   class Students extends React.Component {
@@ -42,7 +43,7 @@ export default connect(
 
           <StudentSearcher/>
 
-          <Button>Smoking only</Button>
+          <Button onClick={this.props.activateFilter}>Smoking only</Button>
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
