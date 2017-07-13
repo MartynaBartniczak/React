@@ -13,7 +13,8 @@ export default connect(
   state => ({
     students: state.students,
     favoriteStudentIds: state.favoriteStudents.favoriteStudentIds,
-    searchPhrase: state.studentSearcher.searchPhrase
+    searchPhrase: state.studentSearcher.searchPhrase,
+    activeFilterNames: state.studentFilters.activeFilterNames
   }),
   dispatch => ({
     fetchStudents: () => dispatch(fetchStudents()),
@@ -45,6 +46,8 @@ export default connect(
           <StudentSearcher/>
 
           <Button onClick={this.props.activateFilter}>Smoking only</Button>
+          {this.props.activeFilterNames.includes('smokingOnly') ? 'YES' : 'NO'}
+          {this.props.activeFilterNames.find(x => x === 'smokingOnly') !== undefined ? 'YES' : 'NO'}
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
