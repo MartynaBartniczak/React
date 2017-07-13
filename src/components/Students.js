@@ -51,7 +51,7 @@ export default connect(
 
           <Button
             onClick={this.props.activateFilter}
-            bsStyle={smokingFilterActive ? 'primary' : 'default'}
+            active={smokingFilterActive}
           >
             Smoking only
           </Button>
