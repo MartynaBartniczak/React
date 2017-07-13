@@ -4,6 +4,7 @@ import thunk from 'redux-thunk'
 import counter from './state/counter'
 import students from './state/students'
 import studentSearcher from './state/studentSearcher'
+import studentFilters from './state/studentFilters'
 import favoriteStudents from './state/favoriteStudents'
 import groups from './state/groups'
 
@@ -11,6 +12,7 @@ const reducer = combineReducers({
   counter,
   students,
   studentSearcher,
+  studentFilters,
   favoriteStudents,
   groups
 })
