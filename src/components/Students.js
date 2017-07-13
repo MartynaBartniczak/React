@@ -32,12 +32,16 @@ export default connect(
 
     render() {
       const { data, fetching, error } = this.props.students
+      const smokingFilterActive = this.props.activeFilterNames.includes('smokingOnly')
       const dataToDisplay = data === null ? [] : data.filter(
-          student => (
-            student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
-            student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
-          )
+        student => (
+          student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
+          student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
         )
+      ).filter(
+        student => smokingFilterActive === false ? true : student.smoking === true
+      )
+
 
       return (
         <div>
@@ -46,8 +50,6 @@ export default connect(
           <StudentSearcher/>
 
           <Button onClick={this.props.activateFilter}>Smoking only</Button>
-          {this.props.activeFilterNames.includes('smokingOnly') ? 'YES' : 'NO'}
-          {this.props.activeFilterNames.find(x => x === 'smokingOnly') !== undefined ? 'YES' : 'NO'}
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
