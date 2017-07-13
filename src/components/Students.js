@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Table } from 'react-bootstrap'
 
 import StudentSearcher from './StudentSearcher'
+import StudentTable from './StudentTable'
 
 import { fetchStudents } from '../state/students'
 import { add, remove, toggle } from '../state/favoriteStudents'
@@ -41,6 +42,7 @@ export default connect(
           <h1>Students</h1>
 
           <StudentSearcher/>
+          <StudentTable/>
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
