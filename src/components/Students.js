@@ -7,7 +7,7 @@ import StudentTable from './StudentTable'
 
 import { fetchStudents } from '../state/students'
 import { add, remove, toggle } from '../state/favoriteStudents'
-import { activateSmokingFilter } from '../state/studentFilters'
+import { activateFilter } from '../state/studentFilters'
 
 export default connect(
   state => ({
@@ -21,7 +21,7 @@ export default connect(
     addToFav: id => dispatch(add(id)),
     removeFromFav: id => dispatch(remove(id)),
     toggleFav: id => dispatch(toggle(id)),
-    activateFilter: () => dispatch(activateSmokingFilter('smokingOnly'))
+    activateFilter: () => dispatch(activateFilter('smokingOnly'))
   })
 )(
   class Students extends React.Component {

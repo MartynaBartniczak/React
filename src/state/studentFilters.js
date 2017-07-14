@@ -1,7 +1,7 @@
-const ACTIVATE_SMOKING_FILTER = 'studentFilters/ACTIVATE_SMOKING_FILTER'
+const TOGGLE_FILTER = 'studentFilters/TOGGLE_FILTER'
 
-export const activateSmokingFilter = filterName => ({
-  type: ACTIVATE_SMOKING_FILTER,
+export const activateFilter = filterName => ({
+  type: TOGGLE_FILTER,
   filterName
 })
 
@@ -10,13 +10,17 @@ const initialState = {
 }
 
 export default (state = initialState, action = {}) => {
-  switch(action.type) {
-    case ACTIVATE_SMOKING_FILTER:
+  switch (action.type) {
+    case TOGGLE_FILTER:
       return {
         ...state,
-        activeFilterNames: state.activeFilterNames.concat(
-          action.filterName
-        )
+        activeFilterNames: state.activeFilterNames.includes(action.filterName) ?
+          state.activeFilterNames.filter(
+            filterName => filterName !== action.filterName
+          ) :
+          state.activeFilterNames.concat(
+            action.filterName
+          )
       }
     default:
       return state
