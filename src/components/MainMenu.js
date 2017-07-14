@@ -30,6 +30,9 @@ const MainMenu = (props) => (
       <LinkContainer to="/students">
         <NavItem>Students</NavItem>
       </LinkContainer>
+      <LinkContainer to="/favorites">
+        <NavItem>Favorites</NavItem>
+      </LinkContainer>
       <LinkContainer to="/groups">
         <NavItem>Groups</NavItem>
       </LinkContainer>

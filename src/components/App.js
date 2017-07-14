@@ -15,6 +15,7 @@ import Student from './Student'
 import Groups from './Groups'
 import Group from './Group'
 import SmartCounter from './SmartCounter'
+import Favorites from './Favorites'
 
 const App = () => (
   <Router>
@@ -32,6 +33,7 @@ const App = () => (
       <Route path="/students/:studentId" component={Student}/>
       <Route exact path="/groups" component={Groups}/>
       <Route path="/groups/:groupId" component={Group}/>
+      <Route path="/favorites" component={Favorites}/>
     </Grid>
   </Router>
 )
