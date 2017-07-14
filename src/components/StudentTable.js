@@ -10,6 +10,8 @@ const StudentTable = (props) => (
       <th>Is fav</th>
       <th>Name</th>
       <th>Surname</th>
+      <th>City</th>
+      <th>Gender</th>
       <th>Is smoking</th>
       <th>Options</th>
     </tr>
@@ -30,6 +32,14 @@ const StudentTable = (props) => (
             </td>
             <td>
               {student.surname}
+            </td>
+
+            <td>
+              {student.city}
+            </td>
+
+            <td>
+              {student.gender}
             </td>
 
             <td>

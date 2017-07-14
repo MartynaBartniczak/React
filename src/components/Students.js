@@ -37,6 +37,9 @@ export default connect(
         smokingOnly: student => student.smoking === true,
         gender_male: student => student.gender === 'Male',
         gender_female: student => student.gender === 'Female',
+        city_gdynia: student => student.city === 'Gdynia',
+        city_gdansk: student => student.city === 'Gdańsk',
+        city_sopot: student => student.city === 'Sopot'
       }
 
       const dataToDisplay = data === null ? [] : data.filter(
@@ -64,6 +67,18 @@ export default connect(
         {
           label: 'Female',
           filterName: 'gender_female'
+        },
+        {
+          label: 'Gdańsk',
+          filterName: 'city_gdansk'
+        },
+        {
+          label: 'Gdynia',
+          filterName: 'city_gdynia'
+        },
+        {
+          label: 'Sopot',
+          filterName: 'city_sopot'
         }
       ]
 
