@@ -1,5 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
+import persistState from 'redux-localstorage'
 
 import counter from './state/counter'
 import students from './state/students'
@@ -21,7 +22,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
   applyMiddleware(
     thunk
-  )
+  ),
+  persistState(['favoriteStudents', 'students'], { key: 'zupa'}),
 ))
 
 export default store
