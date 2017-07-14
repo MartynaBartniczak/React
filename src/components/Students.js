@@ -21,7 +21,7 @@ export default connect(
     addToFav: id => dispatch(add(id)),
     removeFromFav: id => dispatch(remove(id)),
     toggleFav: id => dispatch(toggle(id)),
-    activateFilter: () => dispatch(activateFilter('smokingOnly'))
+    activateFilter: filterName => dispatch(activateFilter(filterName))
   })
 )(
   class Students extends React.Component {
@@ -50,10 +50,17 @@ export default connect(
           <StudentSearcher/>
 
           <Button
-            onClick={this.props.activateFilter}
+            onClick={() => this.props.activateFilter('smokingOnly')}
             active={smokingFilterActive}
           >
             Smoking only
+          </Button>
+
+          <Button
+            onClick={() => this.props.activateFilter('zupa')}
+
+          >
+            Zupa
           </Button>
 
           { error === null ? null : <p>{error.message}</p> }
