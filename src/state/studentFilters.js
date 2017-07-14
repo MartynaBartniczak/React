@@ -22,7 +22,7 @@ export default (state = initialState, action = {}) => {
             activeFilterName => {
               const prefix = action.filterName.split('_')[0]
 
-              return !activeFilterName.includes(prefix)
+              return !(activeFilterName.indexOf(prefix) === 0)
             }
           ).concat(
             action.filterName
