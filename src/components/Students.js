@@ -35,8 +35,8 @@ export default connect(
 
       const filters = {
         smokingOnly: student => student.smoking === true,
-        male: student => student.gender === 'Male',
-        female: student => student.gender === 'Female',
+        gender_male: student => student.gender === 'Male',
+        gender_female: student => student.gender === 'Female',
       }
 
       const dataToDisplay = data === null ? [] : data.filter(
@@ -59,11 +59,11 @@ export default connect(
         },
         {
           label: 'Male',
-          filterName: 'male'
+          filterName: 'gender_male'
         },
         {
           label: 'Female',
-          filterName: 'female'
+          filterName: 'gender_female'
         }
       ]
 
