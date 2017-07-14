@@ -78,6 +78,7 @@ export default connect(
             buttons.map(
               button => (
                 <Button
+                  key={button.filterName}
                   onClick={() => this.props.activateFilter(button.filterName)}
                   active={this.props.activeFilterNames.includes(button.filterName)}
                 >
