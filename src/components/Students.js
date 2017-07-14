@@ -32,20 +32,17 @@ export default connect(
 
     render() {
       const { data, fetching, error } = this.props.students
-      const smokingFilterActive = this.props.activeFilterNames.includes('smokingOnly')
-      const maleFilterActive = this.props.activeFilterNames.includes('male')
-      const femaleFilterActive = this.props.activeFilterNames.includes('female')
       const dataToDisplay = data === null ? [] : data.filter(
         student => (
           student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
           student.surname.toLowerCase().includes(this.props.searchPhrase.toLowerCase())
         )
       ).filter(
-        student => smokingFilterActive === false ? true : student.smoking === true
+        student => this.props.activeFilterNames.includes('smokingOnly') === false ? true : student.smoking === true
       ).filter(
-        student => maleFilterActive === false ? true : student.gender === 'Male'
+        student => this.props.activeFilterNames.includes('male') === false ? true : student.gender === 'Male'
       ).filter(
-        student => femaleFilterActive === false ? true : student.gender === 'Female'
+        student => this.props.activeFilterNames.includes('female') === false ? true : student.gender === 'Female'
       )
 
       const buttons = [
