@@ -18,7 +18,13 @@ export default (state = initialState, action = {}) => {
           state.activeFilterNames.filter(
             filterName => filterName !== action.filterName
           ) :
-          state.activeFilterNames.concat(
+          state.activeFilterNames.filter(
+            activeFilterName => {
+              const prefix = action.filterName.split('_')[0]
+
+              return !activeFilterName.includes(prefix)
+            }
+          ).concat(
             action.filterName
           )
       }
