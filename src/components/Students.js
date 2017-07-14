@@ -21,7 +21,7 @@ export default connect(
     addToFav: id => dispatch(add(id)),
     removeFromFav: id => dispatch(remove(id)),
     toggleFav: id => dispatch(toggle(id)),
-    activateFilter: () => dispatch(activateSmokingFilter())
+    activateFilter: () => dispatch(activateSmokingFilter('smokingOnly'))
   })
 )(
   class Students extends React.Component {

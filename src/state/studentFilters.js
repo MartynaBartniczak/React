@@ -1,7 +1,8 @@
 const ACTIVATE_SMOKING_FILTER = 'studentFilters/ACTIVATE_SMOKING_FILTER'
 
-export const activateSmokingFilter = () => ({
-  type: ACTIVATE_SMOKING_FILTER
+export const activateSmokingFilter = filterName => ({
+  type: ACTIVATE_SMOKING_FILTER,
+  filterName
 })
 
 const initialState = {
@@ -13,7 +14,9 @@ export default (state = initialState, action = {}) => {
     case ACTIVATE_SMOKING_FILTER:
       return {
         ...state,
-        activeFilterNames: ['smokingOnly']
+        activeFilterNames: state.activeFilterNames.concat(
+          action.filterName
+        )
       }
     default:
       return state
