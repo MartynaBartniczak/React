@@ -33,7 +33,6 @@ export default connect(
     render() {
       const { data, fetching, error } = this.props.students
       const smokingFilterActive = this.props.activeFilterNames.includes('smokingOnly')
-      const zupaFilterActive = this.props.activeFilterNames.includes('zupa')
       const dataToDisplay = data === null ? [] : data.filter(
         student => (
           student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
@@ -52,14 +51,14 @@ export default connect(
 
           <Button
             onClick={() => this.props.activateFilter('smokingOnly')}
-            active={smokingFilterActive}
+            active={this.props.activeFilterNames.includes('smokingOnly')}
           >
             Smoking only
           </Button>
 
           <Button
             onClick={() => this.props.activateFilter('zupa')}
-            active={zupaFilterActive}
+            active={this.props.activeFilterNames.includes('zupa')}
           >
             Zupa
           </Button>
