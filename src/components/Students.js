@@ -42,6 +42,17 @@ export default connect(
         student => smokingFilterActive === false ? true : student.smoking === true
       )
 
+      const buttons = [
+        {
+          label: 'Smoking only',
+          filterName: 'smokingOnly'
+        },
+        {
+          label: 'Zupa',
+          filterName: 'zupa'
+        }
+      ]
+
 
       return (
         <div>
@@ -49,19 +60,18 @@ export default connect(
 
           <StudentSearcher/>
 
-          <Button
-            onClick={() => this.props.activateFilter('smokingOnly')}
-            active={this.props.activeFilterNames.includes('smokingOnly')}
-          >
-            Smoking only
-          </Button>
-
-          <Button
-            onClick={() => this.props.activateFilter('zupa')}
-            active={this.props.activeFilterNames.includes('zupa')}
-          >
-            Zupa
-          </Button>
+          {
+            buttons.map(
+              button => (
+                <Button
+                  onClick={() => this.props.activateFilter(button.fiterName)}
+                  active={this.props.activeFilterNames.includes(button.filterName)}
+                >
+                  {button.label}
+                </Button>
+              )
+            )
+          }
 
           { error === null ? null : <p>{error.message}</p> }
           { fetching === false ? null : <p>Fetching data...</p>}
