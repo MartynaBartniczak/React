@@ -33,6 +33,8 @@ export default connect(
     render() {
       const { data, fetching, error } = this.props.students
       const smokingFilterActive = this.props.activeFilterNames.includes('smokingOnly')
+      const maleFilterActive = this.props.activeFilterNames.includes('male')
+      const femaleFilterActive = this.props.activeFilterNames.includes('female')
       const dataToDisplay = data === null ? [] : data.filter(
         student => (
           student.name.toLowerCase().includes(this.props.searchPhrase.toLowerCase()) ||
@@ -40,6 +42,10 @@ export default connect(
         )
       ).filter(
         student => smokingFilterActive === false ? true : student.smoking === true
+      ).filter(
+        student => maleFilterActive === false ? true : student.gender === 'Male'
+      ).filter(
+        student => femaleFilterActive === false ? true : student.gender === 'Female'
       )
 
       const buttons = [
@@ -48,8 +54,12 @@ export default connect(
           filterName: 'smokingOnly'
         },
         {
-          label: 'Zupa',
-          filterName: 'zupa'
+          label: 'Male',
+          filterName: 'male'
+        },
+        {
+          label: 'Female',
+          filterName: 'female'
         }
       ]
 
@@ -64,7 +74,7 @@ export default connect(
             buttons.map(
               button => (
                 <Button
-                  onClick={() => this.props.activateFilter(button.fiterName)}
+                  onClick={() => this.props.activateFilter(button.filterName)}
                   active={this.props.activeFilterNames.includes(button.filterName)}
                 >
                   {button.label}
