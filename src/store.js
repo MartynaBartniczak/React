@@ -23,7 +23,7 @@ const store = createStore(reducer, /* preloadedState, */ composeEnhancers(
   applyMiddleware(
     thunk
   ),
-  persistState(['favoriteStudents', 'students'], { key: 'zupa'}),
+  persistState(['favoriteStudents', 'students'], { key: 'our-app-name'}),
 ))
 
 export default store
