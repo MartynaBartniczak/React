@@ -7,3 +7,4 @@
 - https://mikewest.org/2013/09/frontend-security-frontendconf-2013
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 - https://code.google.com/archive/p/browsersec/wikis/Main.wiki
+- https://github.com/shieldfy/API-Security-Checklist
