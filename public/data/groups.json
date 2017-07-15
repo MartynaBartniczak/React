@@ -1,0 +1,10 @@
+[{"id":1,"name":"Alpha","studentIds":[5,14,20,3,9,1,8,12],"city":"Sopot","level":"advanced"},
+{"id":2,"name":"Duobam","studentIds":[14,16,18,3,7,12,8,1],"city":"Gdańsk","level":"beginner"},
+{"id":3,"name":"Home Ing","studentIds":[13,19,11,14,2,1,18,7,20,12,4],"city":"Gdańsk","level":"advanced"},
+{"id":4,"name":"Fix San","studentIds":[15,20,9,4,11,7,19,10],"city":"Gdynia","level":"beginner"},
+{"id":5,"name":"Duobam","studentIds":[14,15,6,3,19,10,5,9,2,12,7,8,4],"city":"Gdynia","level":"advanced"},
+{"id":6,"name":"Toughjoyfax","studentIds":[2,15],"city":"Gdynia","level":"advanced"},
+{"id":7,"name":"Bamity","studentIds":[10,1,11,4,12,3,8],"city":"Gdynia","level":"intermediate"},
+{"id":8,"name":"Lotlux","studentIds":[11,17,19,6,12,14,7,20,4,8,13,9,16],"city":"Gdynia","level":"intermediate"},
+{"id":9,"name":"Bigtax","studentIds":[15,16,7,5],"city":"Sopot","level":"intermediate"},
+{"id":10,"name":"Alphazap","studentIds":[1,5,9,11,19,3,7,14,8,15,6,4],"city":"Gdańsk","level":"intermediate"}]
