@@ -8,3 +8,4 @@
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 - https://code.google.com/archive/p/browsersec/wikis/Main.wiki
 - https://github.com/shieldfy/API-Security-Checklist
+- http://n-gate.com/software/2017/07/12/0/
