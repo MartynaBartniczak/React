@@ -12,3 +12,4 @@
 - http://searchsecurity.techtarget.com/definition/DNS-attack
 - https://www.owasp.org/index.php/Main_Page
 - https://www.owasp.org/index.php/Category:Attack
+- https://security.stackexchange.com/questions/8145/does-https-prevent-man-in-the-middle-attacks-by-proxy-server
