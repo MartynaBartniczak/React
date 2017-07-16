@@ -10,3 +10,5 @@
 - https://github.com/shieldfy/API-Security-Checklist
 - http://n-gate.com/software/2017/07/12/0/
 - http://searchsecurity.techtarget.com/definition/DNS-attack
+- https://www.owasp.org/index.php/Main_Page
+- https://www.owasp.org/index.php/Category:Attack
